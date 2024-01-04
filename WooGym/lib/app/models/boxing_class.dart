@@ -1,0 +1,2 @@
+
+/// BoxingClass Model.
