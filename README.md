@@ -4,8 +4,7 @@
 
 # WooCommerce App: WooGym
 
-### WooGym - v1.0.0
-
+### WooGym
 
 [Official WooSignal WooCommerce App](https://woosignal.com)
 
