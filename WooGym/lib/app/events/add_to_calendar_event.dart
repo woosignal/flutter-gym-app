@@ -16,8 +16,7 @@ class DefaultListener extends NyListener {
     Order order = event['order'] as Order;
 
     final Event eventCalendar = Event(
-      title:
-          "${order.lineItems?.first.name} with ${order.instructor}",
+      title: "${order.lineItems?.first.name} with ${order.instructor}",
       description: 'Gym class at ${order.gym}',
       location: '${order.gym}',
       startDate: order.classTime,

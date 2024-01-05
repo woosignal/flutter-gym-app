@@ -1,6 +1,6 @@
 {
   "Welcome to {{name}}": "ยินดีต้อนรับสู่ {{name}}",
-  "Let's get started!" : "Let's get started!",
+  "Let's get started!" : "มาเริ่มกันเลย",
   "Account Details": "รายละเอียดบัญชี",
   "Account Orders": "คำสั่งซื้อบัญชี",
   "View privacy policy": "ดูนโยบายความเป็นส่วนตัว",
@@ -266,5 +266,8 @@
   "Account deleted": "ลบบัญชีแล้ว",
   "Shipping is not supported for your location, sorry": "ไม่รองรับการจัดส่งสำหรับตำแหน่งของคุณ ขออภัย",
   "Order Summary": "สรุปการสั่งซื้อ",
+  "with": "กับ",
+  "Finished": "ที่เสร็จเรียบร้อย",
+  "Coupon Applied": "ใช้คูปองแล้ว",
   "By completing this order, I agree to all": "เมื่อดำเนินการตามคำสั่งซื้อนี้เสร็จสิ้น ฉันยอมรับทุกประการ"
 }

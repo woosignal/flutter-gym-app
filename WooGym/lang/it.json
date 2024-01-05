@@ -1,6 +1,6 @@
 {
   "Welcome to {{name}}": "Benvenuto a {{nome}}",
-  "Let's get started!" : "Let's get started!",
+  "Let's get started!" : "Iniziamo!",
   "Account Details": "Dettagli account",
   "Account Orders": "Ordini account",
   "View privacy policy": "Visualizza l'informativa sulla privacy",
@@ -266,5 +266,8 @@
   "Account deleted": "Conto eliminato",
   "Shipping is not supported for your location, sorry": "La spedizione non è supportata per la tua località, siamo spiacenti",
   "Order Summary": "Riepilogo dell'ordine",
+  "with": "con",
+  "Finished": "Finito",
+  "Coupon Applied": "Coupon applicato",
   "By completing this order, I agree to all": "Completando questo ordine, accetto tutto"
 }

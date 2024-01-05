@@ -4,17 +4,11 @@ import '/app/controllers/dashboard_controller.dart';
 import '/app/controllers/login_controller.dart';
 import '/app/controllers/register_controller.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-
-import '/../app/networking/wp_api_service.dart';
+import '/app/networking/wp_api_service.dart';
 import 'package:flutter_app/app/models/user.dart';
 import 'package:flutter_app/app/controllers/account_order_detail_controller.dart';
-import 'package:flutter_app/app/controllers/browse_category_controller.dart';
 import 'package:flutter_app/app/controllers/checkout_status_controller.dart';
-import 'package:flutter_app/app/controllers/leave_review_controller.dart';
-import 'package:flutter_app/app/controllers/product_detail_controller.dart';
-import 'package:flutter_app/app/controllers/product_image_viewer_controller.dart';
-import 'package:flutter_app/app/controllers/product_reviews_controller.dart';
-import '/../app/models/boxing_event.dart';
+import '/app/models/boxing_event.dart';
 import 'package:flutter_app/app/networking/api_service.dart';
 
 /*
@@ -65,23 +59,11 @@ final Map<Type, NyApiService> apiDecoders = {
 |--------------------------------------------------------------------------
 */
 final Map<Type, BaseController Function()> controllers = {
-  ProductDetailController: () => ProductDetailController(),
   AccountOrderDetailController: () => AccountOrderDetailController(),
-  BrowseCategoryController: () => BrowseCategoryController(),
   CheckoutStatusController: () => CheckoutStatusController(),
-  LeaveReviewController: () => LeaveReviewController(),
-  ProductImageViewerController: () => ProductImageViewerController(),
-  ProductReviewsController: () => ProductReviewsController(),
-
-  // ...
-
   RegisterController: () => RegisterController(),
-
   LoginController: () => LoginController(),
-
   DashboardController: () => DashboardController(),
-
   ProfileController: () => ProfileController(),
-
   BookAClassController: () => BookAClassController(),
 };

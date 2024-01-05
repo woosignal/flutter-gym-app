@@ -175,9 +175,7 @@ class _DashboardPageState extends NyState<DashboardPage> {
                   ],
                 ),
               ),
-
               BookAClass(),
-
               NyTabbedLayoutTwo(
                 tabs: ["My Classes".tr(), "About".tr()],
                 widgets: [

@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.nylo.android"
+    namespace "com.woogym.android"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 

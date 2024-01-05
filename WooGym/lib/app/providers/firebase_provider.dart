@@ -6,16 +6,15 @@ import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/woosignal.dart';
 
 class FirebaseProvider implements NyProvider {
-
   @override
   boot(Nylo nylo) async {
-
     return null;
   }
 
   @override
   afterBoot(Nylo nylo) async {
-    bool? firebaseFcmIsEnabled = AppHelper.instance.appConfig?.firebaseFcmIsEnabled;
+    bool? firebaseFcmIsEnabled =
+        AppHelper.instance.appConfig?.firebaseFcmIsEnabled;
     firebaseFcmIsEnabled ??= getEnv('FCM_ENABLED', defaultValue: false);
 
     if (firebaseFcmIsEnabled != true) return;

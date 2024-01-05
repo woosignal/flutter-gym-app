@@ -1,6 +1,6 @@
 {
   "Welcome to {{name}}": "{{name}}'a hoş geldiniz",
-  "Let's get started!" : "Let's get started!",
+  "Let's get started!" : "Başlayalım!",
   "Account Details": "hesap detayları",
   "Account Orders": "Hesap Emirleri",
   "View privacy policy": "Gizlilik politikasını görüntüle",
@@ -266,5 +266,8 @@
   "Account deleted": "Hesap silindi",
   "Shipping is not supported for your location, sorry": "Bulunduğunuz yer için nakliye desteklenmiyor, üzgünüm",
   "Order Summary": "sipariş özeti",
+  "with": "ile",
+  "Finished": "Bitti",
+  "Coupon Applied": "Kupon Uygulandı",
   "By completing this order, I agree to all": "Bu siparişi tamamlayarak hepsini kabul ediyorum"
 }

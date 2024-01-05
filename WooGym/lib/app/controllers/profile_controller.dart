@@ -12,7 +12,6 @@ import 'controller.dart';
 class ProfileController extends Controller {
   final WooSignalApp? wooSignalApp = AppHelper.instance.appConfig;
 
-
   _wpDeleteAccount() async {
     lockRelease('delete_account', perform: () async {
       String? userToken = await readAuthToken();

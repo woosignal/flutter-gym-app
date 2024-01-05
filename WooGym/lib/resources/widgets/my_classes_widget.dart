@@ -1,11 +1,21 @@
+//  Label StoreMax
+//
+//  Created by Anthony Gordon.
+//  2024, WooSignal Ltd. All rights reserved.
+//
+
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/events/add_to_calendar_event.dart';
 import 'package:flutter_app/bootstrap/extensions.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/order.dart';
-
-import '../../bootstrap/helpers.dart';
-import '../../bootstrap/shared_pref/sp_auth.dart';
+import '/bootstrap/helpers.dart';
+import '/bootstrap/shared_pref/sp_auth.dart';
 
 class MyClasses extends StatefulWidget {
   MyClasses({super.key, required this.orders});
@@ -118,14 +128,14 @@ class _MyClassesState extends NyState<MyClasses> {
                     child: Row(
                       children: [
                         if (!order.classTime.isInPast())
-                        IconButton(
-                          icon: Icon(Icons.calendar_month),
-                          onPressed: () async {
-                            await event<AddToCalendarEvent>(
-                                data: {"order": order});
-                          },
-                          padding: EdgeInsets.zero,
-                        )
+                          IconButton(
+                            icon: Icon(Icons.calendar_month),
+                            onPressed: () async {
+                              await event<AddToCalendarEvent>(
+                                  data: {"order": order});
+                            },
+                            padding: EdgeInsets.zero,
+                          )
                       ],
                     ),
                   )

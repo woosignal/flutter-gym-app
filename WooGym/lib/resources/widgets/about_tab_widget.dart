@@ -1,3 +1,13 @@
+//  Label StoreMax
+//
+//  Created by Anthony Gordon.
+//  2024, WooSignal Ltd. All rights reserved.
+//
+
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bootstrap/app_helper.dart';
 import 'package:nylo_framework/nylo_framework.dart';
@@ -18,7 +28,6 @@ class AboutTabState extends NyState<AboutTab> {
   AboutTabState() {
     stateName = AboutTab.state;
   }
-
 
   @override
   stateUpdated(dynamic data) async {}
@@ -88,19 +97,19 @@ class AboutTabState extends NyState<AboutTab> {
                       color: Colors.grey.shade300,
                       tiles: [
                         if (getEnv('GYM_CONTACT_NUMBER') != null)
-                        ListTile(
-                          leading: Icon(Icons.phone),
-                          title: Text("Call us".tr()),
-                          onTap: () async =>
-                              await _launchPhoneCall(getEnv('GYM_CONTACT_NUMBER')),
-                        ),
+                          ListTile(
+                            leading: Icon(Icons.phone),
+                            title: Text("Call us".tr()),
+                            onTap: () async => await _launchPhoneCall(
+                                getEnv('GYM_CONTACT_NUMBER')),
+                          ),
                         if (getEnv('GYM_EMAIL_ADDRESS') != null)
-                        ListTile(
-                          leading: Icon(Icons.email),
-                          title: Text("Email us".tr()),
-                          onTap: () async =>
-                              await _launchEmail(getEnv('GYM_EMAIL_ADDRESS')),
-                        ),
+                          ListTile(
+                            leading: Icon(Icons.email),
+                            title: Text("Email us".tr()),
+                            onTap: () async =>
+                                await _launchEmail(getEnv('GYM_EMAIL_ADDRESS')),
+                          ),
                       ]).toList()),
             ),
           );

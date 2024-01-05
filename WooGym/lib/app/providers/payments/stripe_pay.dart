@@ -77,8 +77,7 @@ stripePay(context,
           style: Theme.of(state.context).brightness == Brightness.light
               ? ThemeMode.light
               : ThemeMode.dark,
-          merchantDisplayName:
-          wooSignalApp?.appName,
+          merchantDisplayName: wooSignalApp?.appName,
           customerId: rsp!['customer'],
           paymentIntentClientSecret: rsp!['client_secret'],
           customerEphemeralKeySecret: rsp!['ephemeral_key'],

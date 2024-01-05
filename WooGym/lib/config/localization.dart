@@ -34,7 +34,9 @@ final List<String> languagesList = const [
   'hi',
   'it',
   'pt',
-  'zh'
+  'zh',
+  'th',
+  'id'
 ];
 
 /*

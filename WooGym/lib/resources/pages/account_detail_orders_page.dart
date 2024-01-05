@@ -100,9 +100,11 @@ class _AccountDetailOrdersPageState extends NyState<AccountDetailOrdersPage> {
                             ),
                           ],
                         ),
-                        Text("${DateTime.parse(order.dateCreated!).toDateString()}\n${DateTime.parse(order.dateCreated!).toTimeString()}",
+                        Text(
+                          "${DateTime.parse(order.dateCreated!).toDateString()}\n${DateTime.parse(order.dateCreated!).toTimeString()}",
                           textAlign: TextAlign.right,
-                          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          style:
+                              Theme.of(context).textTheme.bodyLarge!.copyWith(
                                     fontWeight: FontWeight.w400,
                                   ),
                         ),
