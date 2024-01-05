@@ -32,7 +32,6 @@ class _AccountProfileUpdatePageState extends NyState<AccountProfileUpdatePage> {
   final TextEditingController _tfFirstName = TextEditingController(),
       _tfLastName = TextEditingController();
 
-
   @override
   void initState() {
     super.initState();

@@ -51,7 +51,10 @@ class _LandingPageState extends NyState<LandingPage> {
                       StoreLogo(
                         color: Colors.white,
                       ).paddingOnly(bottom: 20),
-                      Text("Welcome to {{name}}".tr(arguments: {"name": wooSignalApp.appName ?? "GymFit"}),
+                      Text(
+                              "Welcome to {{name}}".tr(arguments: {
+                                "name": wooSignalApp.appName ?? "WooGym"
+                              }),
                               style: textTheme.headlineLarge!
                                   .copyWith(color: Colors.white))
                           .fontWeightBold()

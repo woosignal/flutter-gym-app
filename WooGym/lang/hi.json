@@ -1,6 +1,6 @@
 {
   "Welcome to {{name}}": "{{naam}} mein aapaka svaagat hai",
-  "Let's get started!" : "Let's get started!",
+  "Let's get started!" : "aaen shuroo karen!",
   "Account Details": "khaata vivaran",
   "Account Orders": "khaata aadesh",
   "View privacy policy": "gopaneeyata neeti dekhen",
@@ -266,5 +266,8 @@
   "Account deleted": "khaata hata diya gaya",
   "Shipping is not supported for your location, sorry": "kshama karen, aapake sthaan ke lie shiping samarthit nahin hai",
   "Order Summary": "aadesh saaraansh",
+  "with": "saath",
+  "Finished": "khatm",
+  "Coupon Applied": "koopan laagoo",
   "By completing this order, I agree to all": "is aadesh ko poora karake main sabhee se sahamat hoon"
 }

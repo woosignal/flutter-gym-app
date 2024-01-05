@@ -7,7 +7,6 @@ import 'controller.dart';
 class DashboardController extends Controller {
   final AppHelper _appHelper = AppHelper.instance;
 
-
   /// Show the location on Google Maps
   showLocationOnGoogleMaps() async {
     await launchUrl(Uri.parse(getEnv('GYM_LOCATION')));
@@ -41,8 +40,8 @@ class DashboardController extends Controller {
                         ListTile(
                           leading: Icon(Icons.phone),
                           title: Text("Call us".tr()),
-                          onTap: () async =>
-                              await _launchPhoneCall(getEnv('GYM_PHONE_NUMBER')),
+                          onTap: () async => await _launchPhoneCall(
+                              getEnv('GYM_PHONE_NUMBER')),
                         ),
                         ListTile(
                           leading: Icon(Icons.email),

@@ -20,7 +20,6 @@ class LoginController extends Controller {
   final TextEditingController tfEmailController = TextEditingController(),
       tfPasswordController = TextEditingController();
 
-
   loginUser() async {
     String email = tfEmailController.text, password = tfPasswordController.text;
 

@@ -1,6 +1,6 @@
 {
   "Welcome to {{name}}": "Selamat datang di {{nama}}",
-  "Let's get started!" : "Let's get started!",
+  "Let's get started!" : "Mari kita mulai!",
   "Account Details": "Detail akun",
   "Account Orders": "Pesanan Akun",
   "View privacy policy": "Lihat kebijakan privasi",
@@ -266,5 +266,8 @@
   "Account deleted": "Akun dihapus",
   "Shipping is not supported for your location, sorry": "Pengiriman tidak didukung untuk lokasi Anda, maaf",
   "Order Summary": "Ringkasan Pesanan",
+  "with": "dengan",
+  "Finished": "Selesai",
+  "Coupon Applied": "Kupon Berlaku",
   "By completing this order, I agree to all": "Dengan menyelesaikan pesanan ini, saya menyetujui semuanya"
 }

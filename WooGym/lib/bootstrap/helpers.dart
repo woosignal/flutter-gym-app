@@ -234,7 +234,8 @@ Future<double?> workoutShippingCostWC({required String? sum}) async {
     String percentVal = newSum.replaceAllMapped(
         defaultRegex(r'percent="([0-9\.]+)"'), (replacePercent) {
       if (replacePercent.groupCount >= 1) {
-        String strPercentage = "( ($orderTotal * ${replacePercent.group(1)}) / 100 )";
+        String strPercentage =
+            "( ($orderTotal * ${replacePercent.group(1)}) / 100 )";
         double? calPercentage = strCal(sum: strPercentage);
 
         // MIN
@@ -303,7 +304,8 @@ Future<double?> workoutShippingClassCostWC(
     String percentVal = newSum.replaceAllMapped(
         defaultRegex(r'percent="([0-9\.]+)"'), (replacePercent) {
       if (replacePercent.groupCount >= 1) {
-        String strPercentage = "( ($orderTotal * ${replacePercent.group(1)}) / 100 )";
+        String strPercentage =
+            "( ($orderTotal * ${replacePercent.group(1)}) / 100 )";
         double? calPercentage = strCal(sum: strPercentage);
 
         // MIN

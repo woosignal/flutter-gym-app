@@ -10,5 +10,4 @@
 
 import 'controller.dart';
 
-class CheckoutStatusController extends Controller {
-}
+class CheckoutStatusController extends Controller {}

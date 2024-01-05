@@ -266,5 +266,8 @@
   "Account deleted": "帐户已删除",
   "Shipping is not supported for your location, sorry": "您所在的位置不支持送货，抱歉",
   "Order Summary": "订单摘要",
+  "with": "和",
+  "Finished": "完成的",
+  "Coupon Applied": "优惠券已应用",
   "By completing this order, I agree to all": "完成此订单即表示我同意所有"
 }

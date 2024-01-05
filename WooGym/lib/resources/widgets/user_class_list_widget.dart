@@ -1,3 +1,13 @@
+//  Label StoreMax
+//
+//  Created by Anthony Gordon.
+//  2024, WooSignal Ltd. All rights reserved.
+//
+
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_app/app/events/add_to_cart_event.dart';
@@ -24,7 +34,6 @@ class UserClassList extends StatefulWidget {
 }
 
 class _UserClassListState extends NyState<UserClassList> {
-
   String image() {
     if (widget.gymClass.images.isNotEmpty) {
       return widget.gymClass.images.first.src ??
@@ -100,15 +109,15 @@ class _UserClassListState extends NyState<UserClassList> {
                                 padding: EdgeInsets.only(bottom: 36),
                                 children: [
                                   Container(
+                                    height: 150,
+                                    child: CachedImageWidget(
+                                      image: image(),
                                       height: 150,
-                                      child: CachedImageWidget(
-                                        image: image(),
-                                        height: 150,
-                                        width: double.infinity,
-                                        fit: BoxFit.cover,
-                                      ).faderBottom(5,
-                                          color: ThemeColor.get(context)
-                                              .primaryAccent),
+                                      width: double.infinity,
+                                      fit: BoxFit.cover,
+                                    ).faderBottom(5,
+                                        color: ThemeColor.get(context)
+                                            .primaryAccent),
                                   ),
                                   Container(
                                     padding: EdgeInsets.symmetric(vertical: 16),
@@ -143,7 +152,9 @@ class _UserClassListState extends NyState<UserClassList> {
                                               CrossAxisAlignment.end,
                                           children: [
                                             Text(
-                                                widget.gymClass.classTime.toTimeString() ?? "",
+                                                widget.gymClass.classTime
+                                                        .toTimeString() ??
+                                                    "",
                                                 style: textTheme.headlineMedium!
                                                     .copyWith(
                                                         color: Colors.white)),
@@ -214,7 +225,10 @@ class _UserClassListState extends NyState<UserClassList> {
         margin: EdgeInsets.only(bottom: 10, right: 10, left: 10),
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(color: !classAvailable ? Colors.grey.shade400 : context.colorStyles.primaryAccent),
+          border: Border.all(
+              color: !classAvailable
+                  ? Colors.grey.shade400
+                  : context.colorStyles.primaryAccent),
           borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
         child: Column(
@@ -247,9 +261,7 @@ class _UserClassListState extends NyState<UserClassList> {
                 Text(
                   "${"Instructor".tr()}: ${widget.gymClass.instructor}",
                 ),
-                Text(
-                    widget.gymClass.classTime.toTimeString() ?? ""
-                ),
+                Text(widget.gymClass.classTime.toTimeString() ?? ""),
               ],
             ),
             if (isLocked('is_class_bookable')) Text("${"One moment".tr()}..."),
@@ -257,7 +269,8 @@ class _UserClassListState extends NyState<UserClassList> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(classAvailable ? 'Available'.tr() : 'Not Available'.tr()),
+                  Text(
+                      classAvailable ? 'Available'.tr() : 'Not Available'.tr()),
                   Text(
                     widget.gymClass.price.toMoney(),
                   ),

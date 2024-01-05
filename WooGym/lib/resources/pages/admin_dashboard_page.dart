@@ -25,7 +25,6 @@ class AdminDashboardPage extends NyStatefulWidget {
 }
 
 class _AdminDashboardPageState extends NyState<AdminDashboardPage> {
-
   final CalendarFormat _calendarFormat = CalendarFormat.week;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode.toggledOff;
   DateTime _focusedDay = DateTime.now();
@@ -51,7 +50,6 @@ class _AdminDashboardPageState extends NyState<AdminDashboardPage> {
       _selectedEvents = _getEventsForDay(_selectedDay!);
     }
   }
-
 
   Map<String, List<Product>> listEvents = {};
 

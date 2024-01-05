@@ -17,7 +17,6 @@ class _AdminClassDetailPageState extends NyState<AdminClassDetailPage> {
   Product? _product;
   String? _day;
 
-
   @override
   boot() async {
     _product = widget.data(key: 'product');
@@ -61,38 +60,38 @@ class _AdminClassDetailPageState extends NyState<AdminClassDetailPage> {
               ),
               Expanded(
                 child: NyListView.separated(
-                    child: (context, order) {
-                      order as Order;
-                      return InkWell(
-                        child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 8),
-                          margin: EdgeInsets.only(bottom: 10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: Colors.grey.shade50,
-                          ),
-                          child: ListTile(
-                            title: Text(
-                              "${order.billing?.firstName} ${order.billing?.lastName}",
-                            ).fontWeightBold(),
-                            subtitle: Text(
-                                "${order.billing?.phone} / ${order.billing?.email}"),
-                            trailing: Icon(Icons.check),
-                          ),
+                  child: (context, order) {
+                    order as Order;
+                    return InkWell(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 8),
+                        margin: EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Colors.grey.shade50,
                         ),
-                      );
-                    },
-                    separatorBuilder: (context, index) {
-                      return Divider();
-                    },
-                    data: () async {
-                      return _orders;
-                    },
-                    empty: Container(
-                      child: Text(
-                        "No Participants".tr(),
+                        child: ListTile(
+                          title: Text(
+                            "${order.billing?.firstName} ${order.billing?.lastName}",
+                          ).fontWeightBold(),
+                          subtitle: Text(
+                              "${order.billing?.phone} / ${order.billing?.email}"),
+                          trailing: Icon(Icons.check),
+                        ),
                       ),
+                    );
+                  },
+                  separatorBuilder: (context, index) {
+                    return Divider();
+                  },
+                  data: () async {
+                    return _orders;
+                  },
+                  empty: Container(
+                    child: Text(
+                      "No Participants".tr(),
                     ),
+                  ),
                 ),
               ),
             ],

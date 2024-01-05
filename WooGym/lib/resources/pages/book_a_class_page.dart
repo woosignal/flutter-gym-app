@@ -27,8 +27,7 @@ class BookAClassPage extends NyStatefulWidget<BookAClassController> {
 
 class _BookAClassPageState extends NyState<BookAClassPage> {
   final CalendarFormat _calendarFormat = CalendarFormat.week;
-  RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
-      .toggledOff;
+  RangeSelectionMode _rangeSelectionMode = RangeSelectionMode.toggledOff;
   DateTime _focusedDay = DateTime.now();
   DateTime _selectedDay = DateTime.now();
   DateTime? _rangeStart;
@@ -86,14 +85,15 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: true,
-          title: Text(
-            'BOOK A CLASS'.tr(),
-            style: textTheme.headlineMedium,
-          ),
+      appBar: AppBar(
+        automaticallyImplyLeading: true,
+        title: Text(
+          'BOOK A CLASS'.tr(),
+          style: textTheme.headlineMedium,
         ),
-        body: afterLoad(child: () {
+      ),
+      body: afterLoad(
+        child: () {
           return Column(children: [
             TableCalendar<Product>(
               locale: NyLocalization.instance.locale.languageCode,
@@ -131,7 +131,7 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
                   ),
                 ),
                 headerMargin: EdgeInsets.only(bottom: 10),
-                  titleCentered: true,
+                titleCentered: true,
                 titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
                 formatButtonVisible: false,
                 leftChevronIcon: const Icon(
@@ -162,13 +162,15 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
                 },
                 data: (iteration) async {
                   if (iteration > 1) {
-                    allClasses = await widget.controller.fetchGymClasses(page: iteration);
+                    allClasses = await widget.controller
+                        .fetchGymClasses(page: iteration);
                     if (allClasses.isEmpty) {
                       return [];
                     }
                   }
                   if (_getEventsForDay(_selectedDay).isEmpty) {
-                    allClasses = await widget.controller.fetchGymClasses(page: iteration);
+                    allClasses = await widget.controller
+                        .fetchGymClasses(page: iteration);
                   }
                   return _getEventsForDay(_selectedDay);
                 },
@@ -206,7 +208,7 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
             ),
           ]);
         },
-        ),
+      ),
     );
   }
 }

@@ -15,7 +15,6 @@ import 'controller.dart';
 import 'package:flutter/widgets.dart';
 
 class AccountOrderDetailController extends Controller {
-
   int? orderId;
   Order? order;
 
