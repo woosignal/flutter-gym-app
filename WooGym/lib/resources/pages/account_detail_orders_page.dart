@@ -9,11 +9,11 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/customer_orders_loader_controller.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/bootstrap/shared_pref/sp_auth.dart';
-import 'package:flutter_app/resources/pages/account_order_detail_page.dart';
-import 'package:flutter_app/resources/widgets/safearea_widget.dart';
+import '/app/controllers/customer_orders_loader_controller.dart';
+import '/bootstrap/helpers.dart';
+import '/bootstrap/shared_pref/sp_auth.dart';
+import '/resources/pages/account_order_detail_page.dart';
+import '/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class AccountDetailOrdersPage extends NyStatefulWidget {

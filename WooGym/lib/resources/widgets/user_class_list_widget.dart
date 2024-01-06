@@ -10,12 +10,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_app/app/events/add_to_cart_event.dart';
-import 'package:flutter_app/bootstrap/extensions.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/pages/admin_class_detail_page.dart';
-import 'package:flutter_app/resources/widgets/buttons.dart';
-import 'package:flutter_app/resources/widgets/cached_image_widget.dart';
+import '/app/events/add_to_cart_event.dart';
+import '/bootstrap/extensions.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/pages/admin_class_detail_page.dart';
+import '/resources/widgets/buttons.dart';
+import '/resources/widgets/cached_image_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/product.dart';
 

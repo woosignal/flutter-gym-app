@@ -1,5 +1,5 @@
 /// boot application
-import 'package:flutter_app/config/providers.dart';
+import '/config/providers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class Boot {

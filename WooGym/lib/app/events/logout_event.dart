@@ -1,9 +1,9 @@
 import 'package:nylo_framework/nylo_framework.dart';
 
-import '../../bootstrap/shared_pref/shared_key.dart';
-import '../../config/storage_keys.dart';
-import '../../resources/pages/landing_page.dart';
-import '../models/cart.dart';
+import '/bootstrap/shared_pref/shared_key.dart';
+import '/config/storage_keys.dart';
+import '/resources/pages/landing_page.dart';
+import '/app/models/cart.dart';
 
 class LogoutEvent implements NyEvent {
   @override

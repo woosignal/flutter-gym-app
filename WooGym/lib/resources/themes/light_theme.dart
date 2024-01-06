@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/config/font.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
-import 'package:flutter_app/resources/themes/text_theme/default_text_theme.dart';
+import '/bootstrap/app_helper.dart';
+import '/config/font.dart';
+import '/resources/themes/styles/color_styles.dart';
+import '/resources/themes/text_theme/default_text_theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -36,6 +36,7 @@ ThemeData lightTheme(ColorStyles lightColors) {
     scaffoldBackgroundColor: lightColors.background,
     hintColor: lightColors.primaryAccent,
     appBarTheme: AppBarTheme(
+      surfaceTintColor: lightColors.appBarBackground,
       backgroundColor: lightColors.appBarBackground,
       titleTextStyle: lightTheme.titleLarge!
           .copyWith(color: lightColors.appBarPrimaryContent),

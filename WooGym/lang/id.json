@@ -1,5 +1,5 @@
 {
-  "Welcome to {{name}}": "Selamat datang di {{nama}}",
+  "Welcome to {{name}}": "Selamat datang di {{name}}",
   "Let's get started!" : "Mari kita mulai!",
   "Account Details": "Detail akun",
   "Account Orders": "Pesanan Akun",
@@ -269,5 +269,21 @@
   "with": "dengan",
   "Finished": "Selesai",
   "Coupon Applied": "Kupon Berlaku",
+  "Forgotten your password?": "Lupa kata sandi?",
+  "Accept terms and conditions": "Menerima syarat dan ketentuan",
+  "Invalid data": "Data tidak valid",
+  "The email field is not a valid email": "Bidang email bukan email yang valid",
+  "The password field cannot be empty": "Bidang kata sandi tidak boleh kosong",
+  "Please read and accept the terms and conditions": "Harap membaca dan menerima syarat dan ketentuan",
+  "I have read and agree to the terms and conditions": "Saya telah membaca dan menyetujui syarat dan ketentuan",
+  "The first name field cannot be empty": "Bidang nama depan tidak boleh kosong",
+  "The first name must have a minimum length of 3 characters.": "Nama depan minimal harus 3 karakter.",
+  "The last name must have a minimum length of 3 characters.": "Nama belakang minimal harus 3 karakter.",
+  "The last name field cannot be empty": "Bidang nama belakang tidak boleh kosong",
+  "The last email field cannot be empty": "Bidang email tidak boleh kosong",
+  "The password must have a minimum length of 6 characters.": "Kata sandi harus memiliki panjang minimal 6 karakter.",
+  "Book a class": "Pesan kelas",
+  "View your account details": "Lihat detail akun Anda",
+  "View your orders": "Lihat pesanan Anda",
   "By completing this order, I agree to all": "Dengan menyelesaikan pesanan ini, saya menyetujui semuanya"
 }

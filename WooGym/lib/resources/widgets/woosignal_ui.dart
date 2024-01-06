@@ -10,13 +10,13 @@
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/models/cart.dart';
-import 'package:flutter_app/app/models/cart_line_item.dart';
-import 'package:flutter_app/app/models/checkout_session.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
-import 'package:flutter_app/resources/widgets/cached_image_widget.dart';
+import '/app/models/cart.dart';
+import '/app/models/cart_line_item.dart';
+import '/app/models/checkout_session.dart';
+import '/bootstrap/app_helper.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/themes/styles/color_styles.dart';
+import '/resources/widgets/cached_image_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/product.dart';
 import 'package:woosignal/models/response/tax_rate.dart';

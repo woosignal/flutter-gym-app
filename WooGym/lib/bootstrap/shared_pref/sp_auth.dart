@@ -8,11 +8,11 @@
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
-import 'package:flutter_app/app/models/cart.dart';
-import 'package:flutter_app/app/models/user.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/bootstrap/shared_pref/shared_key.dart';
-import 'package:flutter_app/resources/pages/landing_page.dart';
+import '/app/models/cart.dart';
+import '/app/models/user.dart';
+import '/bootstrap/helpers.dart';
+import '/bootstrap/shared_pref/shared_key.dart';
+import '/resources/pages/landing_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 Future<bool> authCheck() async => ((await getUser()) != null);

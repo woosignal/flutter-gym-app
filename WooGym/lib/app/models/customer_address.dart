@@ -8,9 +8,9 @@
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
-import 'package:flutter_app/app/models/customer_country.dart';
-import 'package:flutter_app/app/models/default_shipping.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
+import '/app/models/customer_country.dart';
+import '/app/models/default_shipping.dart';
+import '/bootstrap/helpers.dart';
 import 'package:wp_json_api/models/wp_meta_meta.dart';
 
 class CustomerAddress {

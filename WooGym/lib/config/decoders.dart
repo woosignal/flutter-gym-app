@@ -3,13 +3,11 @@ import '/app/controllers/profile_controller.dart';
 import '/app/controllers/dashboard_controller.dart';
 import '/app/controllers/login_controller.dart';
 import '/app/controllers/register_controller.dart';
+import '/app/models/user.dart';
+import '/app/controllers/account_order_detail_controller.dart';
+import '/app/controllers/checkout_status_controller.dart';
+import '/app/networking/api_service.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '/app/networking/wp_api_service.dart';
-import 'package:flutter_app/app/models/user.dart';
-import 'package:flutter_app/app/controllers/account_order_detail_controller.dart';
-import 'package:flutter_app/app/controllers/checkout_status_controller.dart';
-import '/app/models/boxing_event.dart';
-import 'package:flutter_app/app/networking/api_service.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -23,11 +21,6 @@ import 'package:flutter_app/app/networking/api_service.dart';
 final Map<Type, dynamic> modelDecoders = {
   // ...
   User: (data) => User.fromJson(data),
-
-  List<BoxingEvent>: (data) =>
-      List.from(data).map((json) => BoxingEvent.fromJson(json)).toList(),
-
-  BoxingEvent: (data) => BoxingEvent.fromJson(data),
 };
 
 /*
@@ -42,10 +35,6 @@ final Map<Type, dynamic> modelDecoders = {
 
 final Map<Type, NyApiService> apiDecoders = {
   ApiService: ApiService(),
-
-  // ...
-
-  WpApiService: WpApiService(),
 };
 
 /*

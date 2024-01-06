@@ -1,10 +1,10 @@
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/product.dart';
-import '../../bootstrap/helpers.dart';
-import '../models/cart.dart';
-import '../models/cart_line_item.dart';
-import '../models/checkout_session.dart';
-import '../models/customer_address.dart';
+import '/bootstrap/helpers.dart';
+import '/app/models/cart.dart';
+import '/app/models/cart_line_item.dart';
+import '/app/models/checkout_session.dart';
+import '/app/models/customer_address.dart';
 
 class AddToCartEvent implements NyEvent {
   @override

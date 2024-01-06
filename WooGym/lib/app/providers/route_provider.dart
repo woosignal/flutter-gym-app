@@ -1,7 +1,7 @@
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/config/storage_keys.dart';
-import 'package:flutter_app/resources/pages/landing_page.dart';
-import 'package:flutter_app/routes/router.dart';
+import '/bootstrap/app_helper.dart';
+import '/config/storage_keys.dart';
+import '/resources/pages/landing_page.dart';
+import '/routes/router.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class RouteProvider implements NyProvider {

@@ -9,12 +9,12 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/register_controller.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/widgets/buttons.dart';
-import 'package:flutter_app/resources/widgets/safearea_widget.dart';
-import 'package:flutter_app/resources/widgets/woosignal_ui.dart';
+import '/app/controllers/register_controller.dart';
+import '/bootstrap/app_helper.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/widgets/buttons.dart';
+import '/resources/widgets/safearea_widget.dart';
+import '/resources/widgets/woosignal_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class AccountRegistrationPage extends NyStatefulWidget<RegisterController> {
@@ -95,10 +95,11 @@ class _AccountRegistrationPageState extends NyState<AccountRegistrationPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Accept terms and conditions")
+                      Text("Accept terms and conditions".tr())
                           .onTap(widget.controller.showTermsAndConditions),
                       Text(
-                        "I have read and agree to the terms and conditions",
+                        "I have read and agree to the terms and conditions"
+                            .tr(),
                         maxLines: 2,
                       )
                     ],
@@ -117,19 +118,20 @@ class _AccountRegistrationPageState extends NyState<AccountRegistrationPage> {
                 child: InkWell(
                   child: RichText(
                     text: TextSpan(
-                        text:
-                            '${trans("By tapping \"Register\" you agree to ")} ${AppHelper.instance.appConfig?.appName}\'s ',
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: trans("terms and conditions"),
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(text: '  ${trans("and")}  '),
-                          TextSpan(
-                              text: trans("privacy policy"),
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                        ],
-                        style: TextStyle(
-                            color: ThemeColor.get(context).primaryContent)),
+                      text:
+                          '${trans("By tapping \"Register\" you agree to ")} ${AppHelper.instance.appConfig?.appName}\'s ',
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: trans("terms and conditions"),
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: '  ${trans("and")}  '),
+                        TextSpan(
+                            text: trans("privacy policy"),
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ],
+                      style: TextStyle(
+                          color: ThemeColor.get(context).primaryContent),
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   onTap: widget.controller.viewTOSModal,

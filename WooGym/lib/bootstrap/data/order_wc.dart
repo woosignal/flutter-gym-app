@@ -10,16 +10,15 @@
 
 import 'dart:io';
 
-import 'package:flutter_app/app/models/billing_details.dart';
-import 'package:flutter_app/app/models/cart.dart';
-import 'package:flutter_app/app/models/cart_line_item.dart';
-import 'package:flutter_app/app/models/checkout_session.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/bootstrap/shared_pref/sp_auth.dart';
+import '/app/models/billing_details.dart';
+import '/app/models/cart.dart';
+import '/app/models/cart_line_item.dart';
+import '/app/models/checkout_session.dart';
+import '/bootstrap/app_helper.dart';
+import '/bootstrap/shared_pref/sp_auth.dart';
 import 'package:woosignal/models/payload/order_wc.dart';
 import 'package:woosignal/models/response/tax_rate.dart';
 import 'package:woosignal/models/response/woosignal_app.dart';
-
 import '../helpers.dart';
 
 Future<OrderWC> buildOrderWC({TaxRate? taxRate, bool markPaid = true}) async {

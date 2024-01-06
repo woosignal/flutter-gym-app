@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/profile_controller.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/pages/account_detail_orders_page.dart';
-import 'package:flutter_app/resources/pages/account_profile_update_page.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
+import '/app/controllers/profile_controller.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/pages/account_detail_orders_page.dart';
+import '/resources/pages/account_profile_update_page.dart';
+import '/resources/themes/styles/color_styles.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:wp_json_api/models/responses/wp_user_info_response.dart';
 
@@ -42,13 +42,13 @@ class _ProfilePageState extends NyState<ProfilePage> {
                 ),
                 ListTile(
                   title: Text("Account Details".tr()).fontWeightBold(),
-                  subtitle: Text("View your account details"),
+                  subtitle: Text("View your account details".tr()),
                   trailing: Icon(Icons.arrow_forward_ios),
                   onTap: () => routeTo(AccountProfileUpdatePage.path),
                 ),
                 ListTile(
                   title: Text("Account Orders".tr()).fontWeightBold(),
-                  subtitle: Text("View your orders"),
+                  subtitle: Text("View your orders".tr()),
                   trailing: Icon(Icons.arrow_forward_ios),
                   onTap: () => routeTo(AccountDetailOrdersPage.path),
                 ),

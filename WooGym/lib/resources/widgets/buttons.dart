@@ -10,8 +10,8 @@
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/widgets/app_loader_widget.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/widgets/app_loader_widget.dart';
 
 class PrimaryButton extends WooSignalButton {
   @override

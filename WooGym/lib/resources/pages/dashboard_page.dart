@@ -9,15 +9,15 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/dashboard_controller.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/bootstrap/shared_pref/sp_auth.dart';
-import 'package:flutter_app/resources/pages/profile_page.dart';
-import 'package:flutter_app/resources/widgets/about_tab_widget.dart';
-import 'package:flutter_app/resources/widgets/book_a_class_widget.dart';
-import 'package:flutter_app/resources/widgets/my_classes_widget.dart';
-import 'package:flutter_app/resources/widgets/ny_tabbed_layout_widget.dart';
-import 'package:flutter_app/resources/widgets/woosignal_ui.dart';
+import '/app/controllers/dashboard_controller.dart';
+import '/bootstrap/helpers.dart';
+import '/bootstrap/shared_pref/sp_auth.dart';
+import '/resources/pages/profile_page.dart';
+import '/resources/widgets/about_tab_widget.dart';
+import '/resources/widgets/book_a_class_widget.dart';
+import '/resources/widgets/my_classes_widget.dart';
+import '/resources/widgets/ny_tabbed_layout_widget.dart';
+import '/resources/widgets/woosignal_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/order.dart';
 import 'package:wp_json_api/models/responses/wp_user_info_response.dart';

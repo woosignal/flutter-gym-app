@@ -1,5 +1,5 @@
 {
-  "Welcome to {{name}}": "Bem-vindo a {{nome}}",
+  "Welcome to {{name}}": "Bem-vindo a {{name}}",
   "Let's get started!" : "Vamos começar!",
   "Account Details": "Detalhes da conta",
   "Account Orders": "Pedidos de conta",
@@ -269,5 +269,21 @@
   "with": "com",
   "Finished": "Finalizado",
   "Coupon Applied": "Cupom aplicado",
+  "Forgotten your password?": "Esqueceu sua senha?",
+  "Accept terms and conditions": "aceita termos e Condições",
+  "Invalid data": "Dados inválidos",
+  "The email field is not a valid email": "O campo de email não é um email válido",
+  "The password field cannot be empty": "O campo de senha não pode ficar vazio",
+  "Please read and accept the terms and conditions": "Por favor leia e aceite os termos e condições",
+  "I have read and agree to the terms and conditions": "Li e concordo com os termos e condições",
+  "The first name field cannot be empty": "O campo do primeiro nome não pode ficar vazio",
+  "The first name must have a minimum length of 3 characters.": "O primeiro nome deve ter no mínimo 3 caracteres.",
+  "The last name must have a minimum length of 3 characters.": "O sobrenome deve ter no mínimo 3 caracteres.",
+  "The last name field cannot be empty": "O campo do sobrenome não pode ficar vazio",
+  "The last email field cannot be empty": "O campo de e-mail não pode ficar vazio",
+  "The password must have a minimum length of 6 characters.": "A senha deve ter no mínimo 6 caracteres.",
+  "Book a class": "Reserve uma aula",
+  "View your account details": "Veja os detalhes da sua conta",
+  "View your orders": "Veja seus pedidos",
   "By completing this order, I agree to all": "Ao concluir este pedido, concordo com todos"
 }

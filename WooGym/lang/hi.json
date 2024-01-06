@@ -1,5 +1,5 @@
 {
-  "Welcome to {{name}}": "{{naam}} mein aapaka svaagat hai",
+  "Welcome to {{name}}": "{{name}} mein aapaka svaagat hai",
   "Let's get started!" : "aaen shuroo karen!",
   "Account Details": "khaata vivaran",
   "Account Orders": "khaata aadesh",
@@ -269,5 +269,21 @@
   "with": "saath",
   "Finished": "khatm",
   "Coupon Applied": "koopan laagoo",
+  "Forgotten your password?": "apana paasavard bhool gaye?",
+  "Accept terms and conditions": "niyam aur sharton ko sveekaar karen",
+  "Invalid data": "amaany deta",
+  "The email field is not a valid email": "eemel feeld maany eemel nahin hai",
+  "The password field cannot be empty": "paasavard feeld khaalee nahin ho sakata",
+  "Please read and accept the terms and conditions": "krpaya niyam evan sharten padhen aur sveekaar karen",
+  "I have read and agree to the terms and conditions": "mainne niyam evan sharten padh lee hain aur unase sahamat hoon",
+  "The first name field cannot be empty": "pratham naam feeld khaalee nahin ho sakatee",
+  "The first name must have a minimum length of 3 characters.": "pratham naam mein kam se kam 3 akshar hone chaahie.",
+  "The last name must have a minimum length of 3 characters.": "antim naam mein nyoonatam 3 akshar hone chaahie.",
+  "The last name field cannot be empty": "antim naam feeld khaalee nahin ho sakatee",
+  "The last email field cannot be empty": "eemel feeld khaalee nahin ho sakatee",
+  "The password must have a minimum length of 6 characters.": "paasavard kee nyoonatam lambaee 6 akshar honee chaahie.",
+  "Book a class": "ek kaksha buk karen",
+  "View your account details": "apana khaata vivaran dekhen",
+  "View your orders": "apane ordar dekhen",
   "By completing this order, I agree to all": "is aadesh ko poora karake main sabhee se sahamat hoon"
 }

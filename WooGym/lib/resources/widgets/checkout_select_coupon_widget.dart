@@ -9,7 +9,7 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/models/checkout_session.dart';
+import '/app/models/checkout_session.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class CheckoutSelectCouponWidget extends StatelessWidget {

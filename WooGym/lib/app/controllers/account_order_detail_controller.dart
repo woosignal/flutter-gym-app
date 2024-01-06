@@ -8,9 +8,8 @@
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
-import 'package:flutter_app/bootstrap/helpers.dart';
+import '/bootstrap/helpers.dart';
 import 'package:woosignal/models/response/order.dart';
-
 import 'controller.dart';
 import 'package:flutter/widgets.dart';
 

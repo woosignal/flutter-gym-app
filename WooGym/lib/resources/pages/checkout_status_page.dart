@@ -9,12 +9,12 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/checkout_status_controller.dart';
-import 'package:flutter_app/app/models/cart.dart';
-import 'package:flutter_app/app/models/checkout_session.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/pages/dashboard_page.dart';
-import 'package:flutter_app/resources/widgets/buttons.dart';
+import '/app/controllers/checkout_status_controller.dart';
+import '/app/models/cart.dart';
+import '/app/models/checkout_session.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/pages/dashboard_page.dart';
+import '/resources/widgets/buttons.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/order.dart' as ws_order;
 import '../widgets/woosignal_ui.dart';

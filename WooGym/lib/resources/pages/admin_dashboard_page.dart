@@ -9,9 +9,9 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/pages/profile_page.dart';
-import 'package:flutter_app/resources/widgets/user_class_list_widget.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/pages/profile_page.dart';
+import '/resources/widgets/user_class_list_widget.dart';
 import 'package:intl/intl.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:table_calendar/table_calendar.dart';

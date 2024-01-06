@@ -25,15 +25,15 @@ class BookAClass extends StatelessWidget {
         child: Stack(
           children: [
             Positioned.fill(
-              child: Image.network(
-                "https://womensfitness.co.uk/wp-content/uploads/sites/3/2020/06/shutterstock_1221827803.jpg",
+              child: Image.asset(
+                "book_a_class_hero.png",
                 fit: BoxFit.cover,
-              ).faderBottom(3),
+              ).localAsset().faderBottom(3),
             ),
             Positioned.fill(
                 child: Container(
               alignment: Alignment.center,
-              child: Text("Book a class",
+              child: Text("Book a class".tr(),
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium!
@@ -42,8 +42,10 @@ class BookAClass extends StatelessWidget {
             Positioned(
               child: Container(
                 padding: EdgeInsets.only(bottom: 8, left: 16, right: 16),
-                child: Text('HIIT, Strength, Yoga, Pilates, and more',
+                child: Text(getEnv('GYM_TYPE_OF_CLASSES'),
                     textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: Theme.of(context)
                         .textTheme
                         .bodyLarge!

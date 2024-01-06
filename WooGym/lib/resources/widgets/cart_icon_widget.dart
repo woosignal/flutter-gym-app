@@ -9,8 +9,8 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/models/cart.dart';
-import 'package:flutter_app/app/models/cart_line_item.dart';
+import '/app/models/cart.dart';
+import '/app/models/cart_line_item.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class CartIconWidget extends StatefulWidget {

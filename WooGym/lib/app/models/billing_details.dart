@@ -8,7 +8,7 @@
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
-import 'package:flutter_app/app/models/customer_address.dart';
+import '/app/models/customer_address.dart';
 
 class BillingDetails {
   CustomerAddress? billingAddress;

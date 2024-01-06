@@ -1,16 +1,14 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/config/decoders.dart';
-import 'package:flutter_app/config/design.dart';
-import 'package:flutter_app/config/storage_keys.dart';
-import 'package:flutter_app/config/theme.dart';
-import 'package:flutter_app/config/validation_rules.dart';
+import '/bootstrap/app_helper.dart';
+import '/bootstrap/helpers.dart';
+import '/config/decoders.dart';
+import '/config/design.dart';
+import '/config/storage_keys.dart';
+import '/config/theme.dart';
+import '/config/validation_rules.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import 'package:flutter_app/config/localization.dart';
+import '/config/localization.dart';
 import 'package:woosignal/models/response/woosignal_app.dart';
 import 'package:woosignal/woosignal.dart';
 import 'package:wp_json_api/wp_json_api.dart';
@@ -26,8 +24,8 @@ class AppProvider implements NyProvider {
         .init(appKey: getEnv('APP_KEY'), debugMode: getEnv('APP_DEBUG'));
 
     AppHelper.instance.appConfig = WooSignalApp();
-    AppHelper.instance.appConfig!.themeFont = "Poppins";
-    AppHelper.instance.appConfig!.themeColors = {
+    AppHelper.instance.appConfig?.themeFont = "Poppins";
+    AppHelper.instance.appConfig?.themeColors = {
       'light': {
         'background': '0xFFFFFFFF',
         'primary_text': '0xFF000000',
@@ -56,12 +54,14 @@ class AppProvider implements NyProvider {
       if (wooSignalApp.wpLoginEnabled == 1) {
         if (wooSignalApp.wpLoginBaseUrl == null) {
           AppHelper.instance.appConfig?.wpLoginEnabled = 0;
-          log('Set your stores domain on WooSignal. Go to Features > WP Login and add your domain to "Store Base Url"');
+          NyLogger.debug(
+              'Set your stores domain on WooSignal. Go to Features > WP Login and add your domain to "Store Base Url"');
         }
 
         if (wooSignalApp.wpLoginWpApiPath == null) {
           AppHelper.instance.appConfig?.wpLoginEnabled = 0;
-          log('Set your stores Wp JSON path on WooSignal. Go to Features > WP Login and add your Wp JSON path to "WP API Path"');
+          NyLogger.debug(
+              'Set your stores Wp JSON path on WooSignal. Go to Features > WP Login and add your Wp JSON path to "WP API Path"');
         }
 
         WPJsonAPI.instance.initWith(
@@ -91,7 +91,7 @@ class AppProvider implements NyProvider {
     nylo.addThemes(appThemes);
     nylo.addLoader(loader);
     nylo.addEventBus();
-
+    nylo.addToastNotification(getToastNotificationWidget);
     nylo.addModelDecoders(modelDecoders);
     nylo.addValidationRules(validationRules);
     nylo.addControllers(controllers);

@@ -9,13 +9,13 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/login_controller.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
-import 'package:flutter_app/resources/widgets/buttons.dart';
-import 'package:flutter_app/resources/widgets/safearea_widget.dart';
-import 'package:flutter_app/resources/widgets/woosignal_ui.dart';
+import '/app/controllers/login_controller.dart';
+import '/bootstrap/app_helper.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/themes/styles/color_styles.dart';
+import '/resources/widgets/buttons.dart';
+import '/resources/widgets/safearea_widget.dart';
+import '/resources/widgets/woosignal_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class AccountLandingPage extends NyStatefulWidget<LoginController> {
@@ -46,7 +46,7 @@ class _AccountLandingPageState extends NyState<AccountLandingPage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    'Email',
+                    'Email'.tr(),
                   ),
                   NyTextField(
                     cursorColor: color.primaryAccent,
@@ -66,7 +66,7 @@ class _AccountLandingPageState extends NyState<AccountLandingPage> {
                     height: 16,
                   ),
                   Text(
-                    'Password',
+                    'Password'.tr(),
                   ),
                   const SizedBox(
                     height: 8,
@@ -90,7 +90,7 @@ class _AccountLandingPageState extends NyState<AccountLandingPage> {
                   ),
                   SecondaryButton(
                     action: widget.controller.loginUser,
-                    title: 'Log In'.tr(),
+                    title: 'Login'.tr(),
                     isLoading: isLocked('login'),
                   ),
                   TextButton(
@@ -105,7 +105,7 @@ class _AccountLandingPageState extends NyState<AccountLandingPage> {
                       }
                     },
                     child: Text(
-                      'Forgotten your password?',
+                      'Forgotten your password?'.tr(),
                     ),
                   )
                 ],

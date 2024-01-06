@@ -10,16 +10,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_app/resources/pages/account_landing_page.dart';
-import 'package:flutter_app/resources/pages/account_register_page.dart';
-import 'package:flutter_app/resources/widgets/buttons.dart';
-import 'package:flutter_app/resources/widgets/safearea_widget.dart';
-import 'package:flutter_app/resources/widgets/video_background_player_widget.dart';
-import 'package:flutter_app/resources/widgets/woosignal_ui.dart';
+import '/resources/pages/account_landing_page.dart';
+import '/resources/pages/account_register_page.dart';
+import '/resources/widgets/buttons.dart';
+import '/resources/widgets/safearea_widget.dart';
+import '/resources/widgets/video_background_player_widget.dart';
+import '/resources/widgets/woosignal_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/woosignal_app.dart';
-
-import '../../bootstrap/app_helper.dart';
+import '/bootstrap/app_helper.dart';
 
 class LandingPage extends NyStatefulWidget {
   static const path = '/landing';

@@ -1,5 +1,4 @@
-import 'package:flutter_app/app/networking/dio/interceptors/logging_interceptor.dart';
-import 'package:flutter_app/config/decoders.dart';
+import '/config/decoders.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class BaseApiService extends NyApiService {
@@ -10,8 +9,8 @@ class BaseApiService extends NyApiService {
   final Map<Type, dynamic> decoders = modelDecoders;
 
   /// Default interceptors
-  @override
-  final interceptors = {
-    if (getEnv('APP_DEBUG') == true) LoggingInterceptor: LoggingInterceptor()
-  };
+  // @override
+  // final interceptors = {
+  //
+  // };
 }

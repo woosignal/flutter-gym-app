@@ -8,8 +8,7 @@
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
-import 'package:collection/collection.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
+import '/bootstrap/helpers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/product_variation.dart';
 import 'package:woosignal/models/response/product.dart' as ws_product;
@@ -170,14 +169,6 @@ class CartLineItem extends Model {
       appMetaData =
           List.from(json['app_meta_data']).cast<Map<String, dynamic>>();
     }
-  }
-
-  int getCoins() {
-    if (appMetaData.isEmpty) return 0;
-    Map<String?, dynamic>? data =
-        appMetaData.firstWhereOrNull((data) => data['key'] == 'coins');
-    if (data == null) return 0;
-    return int.parse(data['value']);
   }
 
   @override

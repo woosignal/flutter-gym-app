@@ -1,12 +1,12 @@
-import 'package:flutter_app/app/events/logout_event.dart';
+import '/app/events/logout_event.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/woosignal_app.dart';
 import 'package:wp_json_api/models/responses/wp_user_delete_response.dart';
 import 'package:wp_json_api/wp_json_api.dart';
 
-import '../../bootstrap/app_helper.dart';
-import '../../bootstrap/helpers.dart';
-import '../../bootstrap/shared_pref/sp_auth.dart';
+import '/bootstrap/app_helper.dart';
+import '/bootstrap/helpers.dart';
+import '/bootstrap/shared_pref/sp_auth.dart';
 import 'controller.dart';
 
 class ProfileController extends Controller {
@@ -40,11 +40,11 @@ class ProfileController extends Controller {
   deleteAccount() {
     confirmAction(() async {
       await _wpDeleteAccount();
-    }, title: "Delete Account");
+    }, title: "Delete Account".tr());
   }
 
   logout() {
-    confirmAction(() async => await event<LogoutEvent>(), title: "Logout");
+    confirmAction(() async => await event<LogoutEvent>(), title: "Logout".tr());
   }
 
   void showTermsAndConditions() {

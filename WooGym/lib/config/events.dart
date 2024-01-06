@@ -1,8 +1,8 @@
 import '/app/events/add_to_calendar_event.dart';
 import '/app/events/add_to_cart_event.dart';
-import 'package:flutter_app/app/events/login_event.dart';
-import 'package:flutter_app/app/events/logout_event.dart';
-import 'package:flutter_app/app/models/user.dart';
+import '/app/events/login_event.dart';
+import '/app/events/logout_event.dart';
+import '/app/models/user.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /*

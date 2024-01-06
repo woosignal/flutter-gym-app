@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
+import '/bootstrap/app_helper.dart';
+import '/resources/themes/styles/color_styles.dart';
 
 /*
 |--------------------------------------------------------------------------

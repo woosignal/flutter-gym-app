@@ -1,4 +1,4 @@
-import 'package:flutter_app/bootstrap/helpers.dart';
+import '/bootstrap/helpers.dart';
 import 'package:woosignal/models/response/product.dart';
 
 import 'controller.dart';

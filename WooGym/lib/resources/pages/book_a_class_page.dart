@@ -9,10 +9,10 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/book_a_class_controller.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/widgets/buttons.dart';
-import 'package:flutter_app/resources/widgets/user_class_list_widget.dart';
+import '/app/controllers/book_a_class_controller.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/widgets/buttons.dart';
+import '/resources/widgets/user_class_list_widget.dart';
 import 'package:intl/intl.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:table_calendar/table_calendar.dart';

@@ -1,7 +1,7 @@
 import 'package:add_2_calendar/add_2_calendar.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/order.dart';
-import '../../bootstrap/helpers.dart';
+import '/bootstrap/helpers.dart';
 
 class AddToCalendarEvent implements NyEvent {
   @override

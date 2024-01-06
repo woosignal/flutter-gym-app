@@ -1,13 +1,13 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bootstrap/app_helper.dart';
+import '/bootstrap/app_helper.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/woosignal_app.dart';
-import 'package:flutter_app/app/models/user.dart';
-import 'package:flutter_app/bootstrap/shared_pref/shared_key.dart';
-import 'package:flutter_app/config/storage_keys.dart';
-import 'package:flutter_app/resources/pages/dashboard_page.dart';
+import '/app/models/user.dart';
+import '/bootstrap/shared_pref/shared_key.dart';
+import '/config/storage_keys.dart';
+import '/resources/pages/dashboard_page.dart';
 import 'package:wp_json_api/exceptions/empty_username_exception.dart';
 import 'package:wp_json_api/exceptions/existing_user_email_exception.dart';
 import 'package:wp_json_api/exceptions/existing_user_login_exception.dart';
@@ -16,7 +16,7 @@ import 'package:wp_json_api/exceptions/user_already_exist_exception.dart';
 import 'package:wp_json_api/exceptions/username_taken_exception.dart';
 import 'package:wp_json_api/models/responses/wp_user_register_response.dart';
 import 'package:wp_json_api/wp_json_api.dart';
-import '../../bootstrap/helpers.dart';
+import '/bootstrap/helpers.dart';
 import 'controller.dart';
 
 class RegisterController extends Controller {
@@ -56,8 +56,8 @@ class RegisterController extends Controller {
             "is_true",
             "Invalid|Please read and accept the terms and conditions"
           ],
-          "first name": [firstName, "not_empty"],
-          "last name": [lastName, "not_empty"],
+          "first name": [firstName, "not_empty|min:3"],
+          "last name": [lastName, "not_empty|min:3"],
           "email": [email, "email"],
           "password": [password, "min:6"],
         },
@@ -176,7 +176,7 @@ class RegisterController extends Controller {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Close'),
+            child: Text('Cancel'.tr()),
           ),
         ],
       ),

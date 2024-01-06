@@ -1,5 +1,5 @@
 {
-  "Welcome to {{name}}": "Welkom bij {{naam}}",
+  "Welcome to {{name}}": "Welkom bij {{name}}",
   "Let's get started!" : "Laten we beginnen!",
   "Account Details": "Accountgegevens",
   "Account Orders": "Accountbestellingen",
@@ -269,5 +269,21 @@
   "with": "met",
   "Finished": "Afgerond",
   "Coupon Applied": "Coupon toegepast",
+  "Forgotten your password?": "Je wachtwoord vergeten?",
+  "Accept terms and conditions": "Accepteer de algemene voorwaarden",
+  "Invalid data": "Onjuiste data",
+  "The email field is not a valid email": "Het e-mailadresveld is geen geldig e-mailadres",
+  "The password field cannot be empty": "Het wachtwoordveld mag niet leeg zijn",
+  "Please read and accept the terms and conditions": "Lees en accepteer de algemene voorwaarden",
+  "I have read and agree to the terms and conditions": "Ik heb de algemene voorwaarden gelezen en ga hiermee akkoord",
+  "The first name field cannot be empty": "Het voornaamveld mag niet leeg zijn",
+  "The first name must have a minimum length of 3 characters.": "De voornaam moet minimaal 3 tekens lang zijn.",
+  "The last name must have a minimum length of 3 characters.": "De achternaam moet minimaal 3 tekens lang zijn.",
+  "The last name field cannot be empty": "Het veld voor de achternaam mag niet leeg zijn",
+  "The last email field cannot be empty": "Het e-mailveld mag niet leeg zijn",
+  "The password must have a minimum length of 6 characters.": "Het wachtwoord moet minimaal 6 tekens lang zijn.",
+  "Book a class": "Boek een les",
+  "View your account details": "Bekijk uw accountgegevens",
+  "View your orders": "Bekijk uw bestellingen",
   "By completing this order, I agree to all": "Door deze bestelling te voltooien, ga ik akkoord met alles"
 }
