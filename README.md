@@ -4,8 +4,6 @@
 
 # WooCommerce App: WooGym
 
-### WooGym
-
 [Official WooSignal WooCommerce App](https://woosignal.com)
 
 ![alt text](https://woosignal.com/images/woosignal-woogym-flutter-update-social-banner.png "WooCommerce app - WooGym")
