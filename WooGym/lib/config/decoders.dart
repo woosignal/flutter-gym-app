@@ -7,7 +7,6 @@ import '/app/models/user.dart';
 import '/app/controllers/account_order_detail_controller.dart';
 import '/app/controllers/checkout_status_controller.dart';
 import '/app/networking/api_service.dart';
-import 'package:nylo_framework/nylo_framework.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +32,8 @@ final Map<Type, dynamic> modelDecoders = {
 |--------------------------------------------------------------------------
 */
 
-final Map<Type, NyApiService> apiDecoders = {
-  ApiService: ApiService(),
+final Map<Type, dynamic> apiDecoders = {
+  ApiService: () => ApiService(),
 };
 
 /*
@@ -47,11 +46,11 @@ final Map<Type, NyApiService> apiDecoders = {
 | Learn more https://nylo.dev/docs/5.x/controllers#using-controllers-with-ny-page
 |--------------------------------------------------------------------------
 */
-final Map<Type, BaseController Function()> controllers = {
+final Map<Type, dynamic> controllers = {
   AccountOrderDetailController: () => AccountOrderDetailController(),
   CheckoutStatusController: () => CheckoutStatusController(),
   RegisterController: () => RegisterController(),
-  LoginController: () => LoginController(),
+  LoginController:  LoginController(),
   DashboardController: () => DashboardController(),
   ProfileController: () => ProfileController(),
   BookAClassController: () => BookAClassController(),

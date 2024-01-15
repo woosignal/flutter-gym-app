@@ -10,8 +10,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '/resources/pages/account_landing_page.dart';
-import '/resources/pages/account_register_page.dart';
+import '/resources/pages/login_page.dart';
+import '/resources/pages/register_page.dart';
 import '/resources/widgets/buttons.dart';
 import '/resources/widgets/safearea_widget.dart';
 import '/resources/widgets/video_background_player_widget.dart';
@@ -66,11 +66,11 @@ class _LandingPageState extends NyState<LandingPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           PrimaryButton(
-                            action: () => routeTo(AccountLandingPage.path),
+                            action: () => routeTo(LoginPage.path),
                             title: 'Login'.tr().toUpperCase(),
                           ).flexible(),
                           PrimaryButton(
-                            action: () => routeTo(AccountRegistrationPage.path),
+                            action: () => routeTo(RegisterPage.path),
                             title: 'Register'.tr().toUpperCase(),
                           ).flexible(),
                         ],

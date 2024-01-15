@@ -28,12 +28,10 @@ import 'package:wp_json_api/models/responses/wp_user_info_response.dart';
 import 'package:wp_json_api/wp_json_api.dart';
 import '../../app/models/default_shipping.dart';
 
-class CheckoutDetailsPage extends StatefulWidget {
+class CheckoutDetailsPage extends NyStatefulWidget {
   static String path = "/checkout-details";
-  CheckoutDetailsPage();
 
-  @override
-  _CheckoutDetailsPageState createState() => _CheckoutDetailsPageState();
+  CheckoutDetailsPage() : super(path, child: _CheckoutDetailsPageState());
 }
 
 class _CheckoutDetailsPageState extends NyState<CheckoutDetailsPage> {

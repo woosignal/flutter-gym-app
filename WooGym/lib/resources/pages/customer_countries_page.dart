@@ -15,24 +15,21 @@ import '/resources/widgets/safearea_widget.dart';
 import '/resources/widgets/woosignal_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-class CustomerCountriesPage extends StatefulWidget {
+class CustomerCountriesPage extends NyStatefulWidget {
   static String path = "/customer-countries";
-  CustomerCountriesPage();
 
-  @override
-  createState() => _CustomerCountriesPageState();
+  CustomerCountriesPage() : super(path, child: _CustomerCountriesPageState());
 }
 
-class _CustomerCountriesPageState extends State<CustomerCountriesPage> {
+class _CustomerCountriesPageState extends NyState<CustomerCountriesPage> {
   _CustomerCountriesPageState();
 
   List<DefaultShipping> _defaultShipping = [], _activeShippingResults = [];
   final TextEditingController _tfSearchCountry = TextEditingController();
 
   @override
-  void initState() {
-    super.initState();
-    _getDefaultShipping();
+  init() async {
+    await _getDefaultShipping();
   }
 
   _getDefaultShipping() async {

@@ -17,14 +17,13 @@ import '/resources/widgets/safearea_widget.dart';
 import '/resources/widgets/woosignal_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-class AccountRegistrationPage extends NyStatefulWidget<RegisterController> {
+class RegisterPage extends NyStatefulWidget<RegisterController> {
   static String path = "/account-register";
-  AccountRegistrationPage()
-      : super(path, child: _AccountRegistrationPageState());
+  RegisterPage()
+      : super(path, child: _RegisterPageState());
 }
 
-class _AccountRegistrationPageState extends NyState<AccountRegistrationPage> {
-  _AccountRegistrationPageState();
+class _RegisterPageState extends NyState<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {

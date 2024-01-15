@@ -5,10 +5,10 @@ import '/resources/pages/book_a_class_page.dart';
 import '/resources/pages/dashboard_page.dart';
 import '/resources/pages/profile_page.dart';
 import '/resources/pages/landing_page.dart';
-import '/resources/pages/account_landing_page.dart';
+import '/resources/pages/login_page.dart';
 import '/resources/pages/account_order_detail_page.dart';
 import '/resources/pages/account_profile_update_page.dart';
-import '/resources/pages/account_register_page.dart';
+import '/resources/pages/register_page.dart';
 import '/resources/pages/account_shipping_details_page.dart';
 import '/resources/pages/checkout_confirmation_page.dart';
 import '/resources/pages/checkout_details_page.dart';
@@ -72,10 +72,13 @@ appRouter() => nyRoutes((router) {
       router.route(NoConnectionPage.path, (context) => NoConnectionPage());
 
       // Account Section
-      router.route(AccountLandingPage.path, (_) => AccountLandingPage());
+
+      router.route(LoginPage.path, (_) => LoginPage());
+
+      router.route(LoginPage.path, (_) => LoginPage());
 
       router.route(
-          AccountRegistrationPage.path, (_) => AccountRegistrationPage());
+          RegisterPage.path, (_) => RegisterPage());
 
       router.route(
           AccountProfileUpdatePage.path, (_) => AccountProfileUpdatePage());

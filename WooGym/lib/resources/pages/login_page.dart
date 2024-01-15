@@ -18,12 +18,12 @@ import '/resources/widgets/safearea_widget.dart';
 import '/resources/widgets/woosignal_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-class AccountLandingPage extends NyStatefulWidget<LoginController> {
+class LoginPage extends NyStatefulWidget<LoginController> {
   static const String path = "/login";
-  AccountLandingPage() : super(path, child: _AccountLandingPageState());
+  LoginPage() : super(path, child: _LoginPageState());
 }
 
-class _AccountLandingPageState extends NyState<AccountLandingPage> {
+class _LoginPageState extends NyState<LoginPage> {
   @override
   Widget build(BuildContext context) {
     ColorStyles color = ThemeColor.get(context);

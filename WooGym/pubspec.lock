@@ -354,10 +354,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_animate
-      sha256: "1dbc1aabfb8ec1e9d9feed2b675c21fb6b0a11f99be53ec3bc0f1901af6a8eb7"
+      sha256: "2f3535790fff1ad21bca4f16b7435fa4af6a3c4b43e88e273a8683ed4ec26b26"
       url: "https://pub.dev"
     source: hosted
-    version: "4.3.0"
+    version: "4.4.0"
   flutter_cache_manager:
     dependency: transitive
     description:
@@ -665,18 +665,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: c9c42e08fc62fcee2c227a1c8fc3a5beaa26100842cc31ea5bf39ea1f7b5e20b
+      sha256: "8fdf5415a16d11551a76f5bde60a1936a6db4d583b9138fd478630a30fe0f9e2"
       url: "https://pub.dev"
     source: hosted
-    version: "5.18.4"
+    version: "5.19.0"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "0931447bd85e85451ae7326f3a70b42bb61a9384352d32e4cae28d241e11f6a6"
+      sha256: "1599c99829be2dca30420a5b9d2f1c7b389fda7c484ccdf9a2a46af0be3274bb"
       url: "https://pub.dev"
     source: hosted
-    version: "5.28.0"
+    version: "5.31.0"
   octo_image:
     dependency: transitive
     description:
@@ -849,10 +849,10 @@ packages:
     dependency: "direct main"
     description:
       name: razorpay_flutter
-      sha256: d73a536032f6939f0a6706cff958904d471eb1acb3dc957c8cc4e1628f0fbc28
+      sha256: eadd633997183286e924157ce5033f3b3d953530632f3e3c6057dc7b1f605fb7
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.5"
+    version: "1.3.6"
   recase:
     dependency: transitive
     description:
@@ -933,6 +933,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.0"
+  skeletonizer:
+    dependency: transitive
+    description:
+      name: skeletonizer
+      sha256: "86f373126d9a887a2d63f2463a9913a973ce7f282efa7f0d9d06a17e3f19838c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -1078,10 +1086,10 @@ packages:
     dependency: "direct main"
     description:
       name: url_launcher
-      sha256: e9aa5ea75c84cf46b3db4eea212523591211c3cf2e13099ee4ec147f54201c86
+      sha256: d25bb0ca00432a5e1ee40e69c36c85863addf7cc45e433769d61bed3fe81fd96
       url: "https://pub.dev"
     source: hosted
-    version: "6.2.2"
+    version: "6.2.3"
   url_launcher_android:
     dependency: transitive
     description:

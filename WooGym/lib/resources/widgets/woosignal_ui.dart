@@ -633,7 +633,7 @@ class StoreLogo extends StatelessWidget {
             fit: BoxFit.contain,
             colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
             image: NetworkImage(
-              AppHelper.instance.appConfig!.appLogo ?? "",
+              AppHelper.instance.appConfig?.appLogo ?? "https://woosignal.com/images/woosignal_logo_stripe_blue.png",
             ),
           ),
         ),

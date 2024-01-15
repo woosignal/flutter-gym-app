@@ -16,16 +16,13 @@ import '/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/woosignal_app.dart';
 
-class NoConnectionPage extends StatefulWidget {
+class NoConnectionPage extends NyStatefulWidget {
   static String path = "/no-connection";
-  NoConnectionPage();
 
-  @override
-  createState() => _NoConnectionPageState();
+  NoConnectionPage() : super(path, child: _NoConnectionPageState());
 }
 
 class _NoConnectionPageState extends State<NoConnectionPage> {
-  _NoConnectionPageState();
 
   @override
   void initState() {
@@ -75,6 +72,6 @@ class _NoConnectionPageState extends State<NoConnectionPage> {
     }
 
     AppHelper.instance.appConfig = wooSignalApp;
-    Navigator.pushNamed(context, "/home");
+    routeToInitial();
   }
 }
