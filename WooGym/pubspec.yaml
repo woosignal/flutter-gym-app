@@ -29,7 +29,7 @@ dependencies:
   google_fonts: ^6.1.0
   analyzer: ^6.2.0
   intl: ^0.18.0
-  nylo_framework: ^5.19.0
+  nylo_framework: ^5.20.1
   woosignal: ^3.8.2
   wp_json_api: ^3.3.4
   cached_network_image: ^3.3.1

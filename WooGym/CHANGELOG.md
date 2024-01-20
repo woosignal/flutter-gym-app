@@ -1,3 +1,7 @@
+## [1.3.0] - 2024-01-20
+
+* Pubspec dependency updates
+
 ## [1.2.0] - 2024-01-15
 
 * Rename `AccountLandingPage` to `LoginPage`
