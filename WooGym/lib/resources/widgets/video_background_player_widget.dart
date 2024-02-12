@@ -1,4 +1,4 @@
-//  Label StoreMax
+//  WooGym
 //
 //  Created by Anthony Gordon.
 //  2024, WooSignal Ltd. All rights reserved.
@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:video_player/video_player.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class VideoBackgroundPlayerWidget extends StatefulWidget {
   VideoBackgroundPlayerWidget({super.key, this.color, this.opacity = 0.5});
@@ -43,6 +44,10 @@ class _VideoBackgroundPlayerWidgetState
 
   @override
   Widget build(BuildContext context) {
+    Widget loader = CupertinoActivityIndicator();
+    if (!kIsWeb && Platform.isAndroid) {
+      loader = CircularProgressIndicator();
+    }
     return afterLoad(
       child: () => Container(
         child: FittedBox(
@@ -57,9 +62,7 @@ class _VideoBackgroundPlayerWidgetState
           ),
         ),
       ).animate().fadeIn(duration: Duration(seconds: 1)),
-      loading: Platform.isAndroid
-          ? CircularProgressIndicator()
-          : CupertinoActivityIndicator(),
+      loading: loader,
     );
   }
 }

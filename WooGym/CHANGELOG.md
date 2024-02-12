@@ -1,3 +1,10 @@
+## [1.4.0] - 2024-02-12
+
+* Refactor pages and widgets
+* Add Cash On Delivery to checkout
+* Add PayPal to checkout
+* Pubspec dependency updates
+
 ## [1.3.0] - 2024-01-20
 
 * Pubspec dependency updates

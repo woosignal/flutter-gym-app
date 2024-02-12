@@ -1,4 +1,4 @@
-//  Label StoreMax
+//  WooGym
 //
 //  Created by Anthony Gordon.
 //  2024, WooSignal Ltd. All rights reserved.
@@ -22,7 +22,7 @@ import 'package:woosignal/models/response/coupon.dart';
 class CouponPage extends StatefulWidget {
   static String path = "/checkout-coupons";
   @override
-  _CouponPageState createState() => _CouponPageState();
+  createState() => _CouponPageState();
 }
 
 class _CouponPageState extends State<CouponPage> {

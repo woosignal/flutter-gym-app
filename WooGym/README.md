@@ -26,7 +26,7 @@ You can also upload the app to the IOS app store and Google play store using Flu
 
 ### Requirements
 
-- [WooGym](https://woosignal.com/plugins/wordpress/wp-woo-gym) WordPress plugin - You can download from [WooSignal](https://woosignal.com/plugins/wordpress/wp-woo-gym)
+- [WooGym](https://woosignal.com/plugins/wordpress/wp-woogym) WordPress plugin - You can download from [WooSignal](https://woosignal.com/plugins/wordpress/wp-woo-gym)
 - [WP JSON API](https://woosignal.com/plugins/wordpress/wp-json-api) WordPress plugin - You can download from [WooSignal](https://woosignal.com/plugins/wordpress/wp-json-api)
 - WooCommerce Store 3.5+
 - Android Studio/VSCode (for running the app)

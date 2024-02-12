@@ -1,4 +1,4 @@
-//  Label StoreMax
+//  WooGym
 //
 //  Created by Anthony Gordon.
 //  2024, WooSignal Ltd. All rights reserved.
@@ -30,7 +30,7 @@ class CheckoutShippingTypePage extends StatefulWidget {
   CheckoutShippingTypePage();
 
   @override
-  _CheckoutShippingTypePageState createState() =>
+  createState() =>
       _CheckoutShippingTypePageState();
 }
 
