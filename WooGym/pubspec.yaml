@@ -1,7 +1,7 @@
 # Official WooSignal App Template for WooCommerce
 
 # WooGym - Book Gym Classes - Flutter App Template
-# Version: 1.4.0
+# Version: 1.4.1
 # Author: Anthony Gordon
 # Homepage: https://woosignal.com
 # Documentation: https://woosignal.com/docs/app/woogym
@@ -29,7 +29,7 @@ dependencies:
   google_fonts: ^6.1.0
   analyzer: ^6.2.0
   intl: ^0.18.0
-  nylo_framework: ^5.21.0
+  nylo_framework: ^5.21.1
   woosignal: ^3.9.0
   wp_json_api: ^3.3.4
   cached_network_image: ^3.3.1

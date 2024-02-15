@@ -1,3 +1,7 @@
+## [1.4.1] - 2024-02-15
+
+* Pubspec dependency updates
+
 ## [1.4.0] - 2024-02-12
 
 * Refactor pages and widgets
