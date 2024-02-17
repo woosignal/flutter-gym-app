@@ -1,3 +1,9 @@
+## [1.5.0] - 2024-02-17
+
+* Add more translations
+* Project migration for Android and IOS
+* Pubspec dependency updates
+
 ## [1.4.1] - 2024-02-15
 
 * Pubspec dependency updates

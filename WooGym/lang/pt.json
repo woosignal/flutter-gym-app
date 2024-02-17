@@ -285,5 +285,6 @@
   "Book a class": "Reserve uma aula",
   "View your account details": "Veja os detalhes da sua conta",
   "View your orders": "Veja seus pedidos",
+  "({{itemCount}}) items from {{appName}}": "({{itemCount}}) itens de {{appName}}",
   "By completing this order, I agree to all": "Ao concluir este pedido, concordo com todos"
 }

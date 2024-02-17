@@ -283,6 +283,7 @@
   "The last email field cannot be empty": "Das E-Mail-Feld darf nicht leer sein",
   "The password must have a minimum length of 6 characters.": "Das Passwort muss eine Mindestlänge von 6 Zeichen haben.",
   "Book a class": "Buchen Sie einen Kurs",
+  "({{itemCount}}) items from {{appName}}": "({{itemCount}}) artikel aus {{appName}}",
   "View your account details": "Sehen Sie sich Ihre Kontodaten an",
   "View your orders": "Sehen Sie sich Ihre Bestellungen an",
   "By completing this order, I agree to all": "Mit Abschluss dieser Bestellung stimme ich allen zu"

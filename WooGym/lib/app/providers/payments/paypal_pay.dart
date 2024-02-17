@@ -34,7 +34,9 @@ payPalPay(context, {required CheckoutConfirmationPageState state, TaxRate? taxRa
 
     String shippingTotal = CheckoutSession.getInstance.shippingType?.getTotal() ?? "0";
 
-    String description = "(${cartLineItems.length}) items from ${getEnv('APP_NAME')}".tr(arguments: {"appName": getEnv('APP_NAME')});
+    String description =
+    "({{itemCount}}) items from {{appName}}"
+        .tr(arguments: {"appName": getEnv('APP_NAME'), "itemCount": cartLineItems.length.toString()});
 
     Navigator.of(context).push(MaterialPageRoute(
       builder: (BuildContext context) => PaypalCheckoutView(

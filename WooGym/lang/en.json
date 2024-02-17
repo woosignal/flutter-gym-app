@@ -285,5 +285,6 @@
   "Book a class": "Book a class",
   "View your account details": "View your account details",
     "View your orders": "View your orders",
+  "({{itemCount}}) items from {{appName}}": "({{itemCount}}) items from {{appName}}",
   "By completing this order, I agree to all": "By completing this order, I agree to all"
 }

@@ -285,5 +285,6 @@
   "Book a class": "Boek een les",
   "View your account details": "Bekijk uw accountgegevens",
   "View your orders": "Bekijk uw bestellingen",
+  "({{itemCount}}) items from {{appName}}": "({{itemCount}}) artikelen van {{appName}}",
   "By completing this order, I agree to all": "Door deze bestelling te voltooien, ga ik akkoord met alles"
 }

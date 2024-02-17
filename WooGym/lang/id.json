@@ -285,5 +285,6 @@
   "Book a class": "Pesan kelas",
   "View your account details": "Lihat detail akun Anda",
   "View your orders": "Lihat pesanan Anda",
+  "({{itemCount}}) items from {{appName}}": "({{itemCount}}) item dari {{appName}}",
   "By completing this order, I agree to all": "Dengan menyelesaikan pesanan ini, saya menyetujui semuanya"
 }

@@ -21,7 +21,12 @@ class AppProvider implements NyProvider {
     ]);
 
     await WooSignal.instance
-        .init(appKey: getEnv('APP_KEY'), debugMode: getEnv('APP_DEBUG'));
+        .init(
+        appKey: getEnv('APP_KEY'),
+        debugMode: getEnv('APP_DEBUG'),
+        encryptKey: getEnv('ENCRYPT_KEY'),
+        encryptSecret: getEnv('ENCRYPT_SECRET'),
+    );
 
     AppHelper.instance.appConfig = WooSignalApp();
     AppHelper.instance.appConfig?.themeFont = "Poppins";

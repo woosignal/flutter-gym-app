@@ -285,5 +285,6 @@
   "Book a class": "ek kaksha buk karen",
   "View your account details": "apana khaata vivaran dekhen",
   "View your orders": "apane ordar dekhen",
+  "({{itemCount}}) items from {{appName}}": "({{itemCount}}) se aaitam {{appName}}",
   "By completing this order, I agree to all": "is aadesh ko poora karake main sabhee se sahamat hoon"
 }
