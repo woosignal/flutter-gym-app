@@ -1,3 +1,7 @@
+## [1.5.1] - 2024-02-28
+
+* Pubspec dependency updates
+
 ## [1.5.0] - 2024-02-17
 
 * Add more translations

@@ -13,10 +13,10 @@ packages:
     dependency: transitive
     description:
       name: _flutterfire_internals
-      sha256: "1a52f1afae8ab7ac4741425114713bdbba802f1ce1e0648e167ffcc6e05e96cf"
+      sha256: "737321f9be522620ed3794937298fb0027a48a402624fa2500f7532f94aea810"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.21"
+    version: "1.3.22"
   add_2_calendar:
     dependency: "direct main"
     description:
@@ -237,18 +237,18 @@ packages:
     dependency: transitive
     description:
       name: device_meta
-      sha256: "07d5d226a483609b735b3c67e654fdf0a00545a16a5c909f7ce6230f1e0280aa"
+      sha256: "356a8f6e09c03ec832a701f007c158d4e2e83c41773bdcd6ea39335d7743b35c"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.10"
+    version: "1.1.11"
   dio:
     dependency: transitive
     description:
       name: dio
-      sha256: "797e1e341c3dd2f69f2dad42564a6feff3bfb87187d05abb93b9609e6f1645c3"
+      sha256: "49af28382aefc53562459104f64d16b9dfd1e8ef68c862d5af436cc8356ce5a8"
       url: "https://pub.dev"
     source: hosted
-    version: "5.4.0"
+    version: "5.4.1"
   encrypt:
     dependency: transitive
     description:
@@ -325,26 +325,26 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_messaging
-      sha256: "9c97b20c012542252a8853f11334efd833ddae83551fe37d27f87d885c655038"
+      sha256: "799922b57d09fe89b5634be2a7fea66a2683eb1a02502c71fe90c212240f89ef"
       url: "https://pub.dev"
     source: hosted
-    version: "14.7.15"
+    version: "14.7.16"
   firebase_messaging_platform_interface:
     dependency: transitive
     description:
       name: firebase_messaging_platform_interface
-      sha256: d464b255e922c7915dc4b0ebc305ebad4e1f130519bee3d6e568ef2ea1613a4b
+      sha256: "789a3b26097e2bdad15a407dc552d6af74287b477ceb4aa6ec0d8aa967caf9e5"
       url: "https://pub.dev"
     source: hosted
-    version: "4.5.23"
+    version: "4.5.24"
   firebase_messaging_web:
     dependency: transitive
     description:
       name: firebase_messaging_web
-      sha256: f3f71aeec719ec1fe2c99f75cd74d00d33f1c240cf1e402cc9d43883e84f935a
+      sha256: "156a83d281bbcc92b17496f323c747802287520aece51a893a5fdb8078bccbe7"
       url: "https://pub.dev"
     source: hosted
-    version: "3.6.4"
+    version: "3.6.5"
   fixnum:
     dependency: transitive
     description:
@@ -737,18 +737,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: e24ab4d49e73f5a476071844bf54b9987c203ebb8ea9f966c02157a88a0f2016
+      sha256: efd725c5dc20f341c14496a33c8c36520a4e81802b7d463df2eb734c86b90926
       url: "https://pub.dev"
     source: hosted
-    version: "5.21.2"
+    version: "5.21.6"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: bd0995e801ca746e447cad2878aa1c0b55191ec033f17f33bfb78f7d99a421be
+      sha256: "049a8f69a349a2f038fb95637320798e409de8287138b47a3c85784462e45388"
       url: "https://pub.dev"
     source: hosted
-    version: "5.48.0"
+    version: "5.50.0"
   octo_image:
     dependency: transitive
     description:
@@ -1166,10 +1166,10 @@ packages:
     dependency: "direct main"
     description:
       name: url_launcher
-      sha256: c512655380d241a337521703af62d2c122bf7b77a46ff7dd750092aa9433499c
+      sha256: "0ecc004c62fd3ed36a2ffcbe0dd9700aee63bd7532d0b642a488b1ec310f492e"
       url: "https://pub.dev"
     source: hosted
-    version: "6.2.4"
+    version: "6.2.5"
   url_launcher_android:
     dependency: transitive
     description:
@@ -1334,10 +1334,10 @@ packages:
     dependency: "direct main"
     description:
       name: woosignal
-      sha256: "8dfaaa6ac78a7b137c8829568b1973444d0f94026f8ab1eec59c2637e8a1cbe8"
+      sha256: ad0381d78c4fe563edb7d95df23645bff7bb0dbe20881b6ed363004ddded0eab
       url: "https://pub.dev"
     source: hosted
-    version: "3.9.1"
+    version: "3.9.2"
   wp_json_api:
     dependency: "direct main"
     description:

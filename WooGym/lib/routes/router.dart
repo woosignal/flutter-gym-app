@@ -20,11 +20,8 @@ import '/resources/pages/customer_countries_page.dart';
 import '/resources/pages/no_connection_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-/*
-|--------------------------------------------------------------------------
-| App Router
-|--------------------------------------------------------------------------
-*/
+/* App Router
+|-------------------------------------------------------------------------- */
 
 appRouter() => nyRoutes((router) {
       // User section
