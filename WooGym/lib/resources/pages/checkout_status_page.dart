@@ -34,7 +34,6 @@ class _CheckoutStatusState extends NyState<CheckoutStatusPage> {
     _order = widget.controller.data();
     await Cart.getInstance.clear();
     CheckoutSession.getInstance.clear();
-    setState(() {});
   }
 
   @override
