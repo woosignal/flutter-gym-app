@@ -1,3 +1,8 @@
+## [1.5.3] - 2024-03-08
+
+* Update android config that fixes https://github.com/nylo-core/nylo/issues/112
+* Pubspec dependency updates
+
 ## [1.5.2] - 2024-03-07
 
 * Pubspec dependency updates
