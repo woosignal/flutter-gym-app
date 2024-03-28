@@ -1,3 +1,7 @@
+import 'package:flutter_app/resources/pages/dashboard_page.dart';
+import 'package:flutter_app/resources/pages/no_connection_page.dart';
+import 'package:wp_json_api/wp_json_api.dart';
+
 import '/bootstrap/app_helper.dart';
 import '/config/storage_keys.dart';
 import '/resources/pages/landing_page.dart';
@@ -14,25 +18,24 @@ class RouteProvider implements NyProvider {
 
   @override
   afterBoot(Nylo nylo) async {
-    String initialRoute = AppHelper.instance.appConfig!.appStatus != null
-        ? '/home'
-        : '/no-connection';
-
-    if (initialRoute == '/no-connection') {
-      nylo.setInitialRoute(LandingPage.path);
+    if (AppHelper.instance.appConfig!.appStatus == null) {
+      nylo.setInitialRoute(NoConnectionPage.path);
       return;
     }
 
     String? redirectPath =
-        await NyStorage.read(StorageKey.redirectPathAfterAuth);
-    if ((await Auth.loggedIn()) == false) {
-      redirectPath = null;
-      await NyStorage.delete(StorageKey.redirectPathAfterAuth);
-    }
+    await NyStorage.read(StorageKey.redirectPathAfterAuth);
+
     if (redirectPath != null) {
       nylo.setInitialRoute(redirectPath);
-    } else {
-      nylo.setInitialRoute(LandingPage.path);
+      return;
     }
+
+    if (await Auth.loggedIn(key: WPJsonAPI.storageKey())) {
+      nylo.setInitialRoute(DashboardPage.path);
+      return;
+    }
+
+    nylo.setInitialRoute(LandingPage.path);
   }
 }

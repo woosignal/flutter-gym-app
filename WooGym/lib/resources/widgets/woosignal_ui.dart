@@ -624,18 +624,19 @@ class StoreLogo extends StatelessWidget {
   final Color color;
 
   @override
-  Widget build(BuildContext context) => Container(
-        height: height,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          image: DecorationImage(
-            fit: BoxFit.contain,
-            colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
-            image: NetworkImage(
-              AppHelper.instance.appConfig?.appLogo ?? "https://woosignal.com/images/woosignal_logo_stripe_blue.png",
-            ),
+  Widget build(BuildContext context) {
+    return Container(
+      height: height,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        image: DecorationImage(
+          fit: BoxFit.contain,
+          image: NetworkImage(
+            AppHelper.instance.appConfig?.appLogo ?? "https://woosignal.com/images/woosignal_logo_stripe_blue.png",
           ),
         ),
-      );
+      ),
+    );
+  }
 }

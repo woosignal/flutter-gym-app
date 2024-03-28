@@ -72,8 +72,6 @@ appRouter() => nyRoutes((router) {
 
       router.route(LoginPage.path, (_) => LoginPage());
 
-      router.route(LoginPage.path, (_) => LoginPage());
-
       router.route(
           RegisterPage.path, (_) => RegisterPage());
 

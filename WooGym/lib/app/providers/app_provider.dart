@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '/bootstrap/app_helper.dart';
 import '/bootstrap/helpers.dart';
@@ -69,7 +68,7 @@ class AppProvider implements NyProvider {
               'Set your stores Wp JSON path on WooSignal. Go to Features > WP Login and add your Wp JSON path to "WP API Path"');
         }
 
-        WPJsonAPI.instance.initWith(
+        WPJsonAPI.instance.init(
           baseUrl: wooSignalApp.wpLoginBaseUrl ?? "",
           shouldDebug: getEnv('APP_DEBUG'),
           wpJsonPath: wooSignalApp.wpLoginWpApiPath ?? "",
@@ -80,7 +79,7 @@ class AppProvider implements NyProvider {
           wooSignalApp.locale != null) {
         locale = Locale(wooSignalApp.locale!);
       } else {
-        locale = Locale(envVal('DEFAULT_LOCALE', defaultValue: 'en'));
+        locale = Locale(getEnv('DEFAULT_LOCALE', defaultValue: 'en'));
       }
     }
 
@@ -88,9 +87,8 @@ class AppProvider implements NyProvider {
     await NyLocalization.instance.init(
         localeType: localeType,
         languageCode: locale.languageCode,
-        languagesList: languagesList,
         assetsDirectory: assetsDirectory,
-        valuesAsMap: valuesAsMap);
+    );
 
     nylo.addLogo(logo);
     nylo.addThemes(appThemes);
@@ -107,6 +105,8 @@ class AppProvider implements NyProvider {
     if (redirectPathAfterAuth != null) {
       nylo.setInitialRoute(redirectPathAfterAuth);
     }
+
+    await WPJsonAPI.wpAuth();
 
     return nylo;
   }

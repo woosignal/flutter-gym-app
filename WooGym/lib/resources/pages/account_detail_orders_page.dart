@@ -9,9 +9,9 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
+import 'package:wp_json_api/wp_json_api.dart';
 import '/app/controllers/customer_orders_loader_controller.dart';
 import '/bootstrap/helpers.dart';
-import '/bootstrap/shared_pref/sp_auth.dart';
 import '/resources/pages/account_order_detail_page.dart';
 import '/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
@@ -148,7 +148,7 @@ class _AccountDetailOrdersPageState extends NyState<AccountDetailOrdersPage> {
   }
 
   fetchOrders() async {
-    String? userId = await readUserId();
+    String? userId = await WPJsonAPI.wpUserId();
     if (userId == null) return;
 
     await _customerOrdersLoaderController.loadOrders(

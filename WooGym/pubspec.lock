@@ -13,10 +13,10 @@ packages:
     dependency: transitive
     description:
       name: _flutterfire_internals
-      sha256: "554f148e71e9e016d9c04d4af6b103ca3f74a1ceed7d7307b70a0f41e991eb77"
+      sha256: "53d06f578b8e988f60324f46fcd6ab919ccdc2dc8cbf0cd4161829b1dba7a62b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.26"
+    version: "1.3.27"
   add_2_calendar:
     dependency: "direct main"
     description:
@@ -237,18 +237,18 @@ packages:
     dependency: transitive
     description:
       name: device_meta
-      sha256: f8fc719a705e55b350c23afa366870a62bee3481cd08a2c1aedc9288f5c7f2fb
+      sha256: e156380242061b4fcdd1e4af96e4666af35572e0334ee3891869eaec6e4170b6
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.13"
+    version: "1.1.18"
   dio:
     dependency: transitive
     description:
       name: dio
-      sha256: "49af28382aefc53562459104f64d16b9dfd1e8ef68c862d5af436cc8356ce5a8"
+      sha256: "0978e9a3e45305a80a7210dbeaf79d6ee8bee33f70c8e542dc654c952070217f"
       url: "https://pub.dev"
     source: hosted
-    version: "5.4.1"
+    version: "5.4.2+1"
   encrypt:
     dependency: transitive
     description:
@@ -301,10 +301,10 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_core
-      sha256: "67bf0d5fd78f12f51c6b54a72f6141314136a1a90e98b1b7c45e7fac883254ed"
+      sha256: "4e8728edb3053ffcc194315cb0c10f4676947db793581409e36040065918c94f"
       url: "https://pub.dev"
     source: hosted
-    version: "2.27.1"
+    version: "2.27.2"
   firebase_core_platform_interface:
     dependency: transitive
     description:
@@ -317,34 +317,34 @@ packages:
     dependency: transitive
     description:
       name: firebase_core_web
-      sha256: "5377eaac3b9fe8aaf22638d87f92b62784f23572e132dfc029195e84d6cb37de"
+      sha256: "6afef1b46818eabdc6058df1148307f80e5653c0eaf26beeec693c89154752d4"
       url: "https://pub.dev"
     source: hosted
-    version: "2.12.0"
+    version: "2.13.0"
   firebase_messaging:
     dependency: "direct main"
     description:
       name: firebase_messaging
-      sha256: "34fac43b70d5c41dc864eeb52417128da1f68b0a48604a0c56cd3190f0f609b8"
+      sha256: fd3ae8fd4e1687cac1f5fd788c7f8e69bb1bbb2e3947cdc4c46f304e19ed2f07
       url: "https://pub.dev"
     source: hosted
-    version: "14.7.20"
+    version: "14.7.21"
   firebase_messaging_platform_interface:
     dependency: transitive
     description:
       name: firebase_messaging_platform_interface
-      sha256: "1dcf7d0d6776396bb2e488c53b0e4cc671c45a65717a73d881e52190d23aca3c"
+      sha256: df3c04f31f365cc78052c65678d3b437bfc644b29f63f9e533ba459a6606143a
       url: "https://pub.dev"
     source: hosted
-    version: "4.5.28"
+    version: "4.5.29"
   firebase_messaging_web:
     dependency: transitive
     description:
       name: firebase_messaging_web
-      sha256: ceabccf24d15d03c89dfd6c7eaef11c58fbf00b9c76ebc94028408943b8d2bfd
+      sha256: b60252e4b77a66f3466190d2679b7144218199442c00e6ced45c2963484e9db0
       url: "https://pub.dev"
     source: hosted
-    version: "3.7.0"
+    version: "3.7.1"
   fixnum:
     dependency: transitive
     description:
@@ -487,10 +487,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_spinkit
-      sha256: b39c753e909d4796906c5696a14daf33639a76e017136c8d82bf3e620ce5bb8e
+      sha256: d2696eed13732831414595b98863260e33e8882fc069ee80ec35d4ac9ddb0472
       url: "https://pub.dev"
     source: hosted
-    version: "5.2.0"
+    version: "5.2.1"
   flutter_staggered_grid_view:
     dependency: "direct main"
     description:
@@ -737,18 +737,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "550c56ff8e8cda3c40a39d361fd765530e087ab6df259bdf1b7b9665c2c9bc8a"
+      sha256: d1a31372917642529e27bf804ecadf1dd00000825fe0d59f2c16f7c291a20bf5
       url: "https://pub.dev"
     source: hosted
-    version: "5.21.10"
+    version: "5.24.3"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "36f7b966fe5a8a53d144f72b31e1eabb926f27d596cc4a766e177a28ac223340"
+      sha256: "76ecb47e2d90b572ea81dc971926d18884f1a1a9ab9a0820cfd3ddafdebdfd7c"
       url: "https://pub.dev"
     source: hosted
-    version: "5.54.0"
+    version: "5.60.1"
   octo_image:
     dependency: transitive
     description:
@@ -1009,10 +1009,10 @@ packages:
     dependency: transitive
     description:
       name: skeletonizer
-      sha256: "2eb80153c80507359ff05f6a18ed50ae0bafa1b999aa867a8cef0a53387b5650"
+      sha256: "9a3ae2f4ee4349bdbed3292d04586a1315a44745d2c454684f82f0c46dbeabf9"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -1118,10 +1118,10 @@ packages:
     dependency: "direct main"
     description:
       name: table_calendar
-      sha256: "3f7950145168251aad4fa6c0a914b5ef4e9a82fa365bb349c3ac5378f866e771"
+      sha256: b759eb6caa88dda8e51c70ee43c19d1682f8244458f84cced9138ee35b2ce416
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.0"
+    version: "3.1.1"
   term_glyph:
     dependency: transitive
     description:
@@ -1334,18 +1334,18 @@ packages:
     dependency: "direct main"
     description:
       name: woosignal
-      sha256: fb2cab278be5b30663722c4ddbc3ed8bc68d874bc231b18959e29b753d9affc6
+      sha256: "6390953da29b596eea94fecf26863b1f1bbf3503b5641de92910358432f7a01f"
       url: "https://pub.dev"
     source: hosted
-    version: "3.13.0"
+    version: "3.13.4"
   wp_json_api:
     dependency: "direct main"
     description:
       name: wp_json_api
-      sha256: "7aa9b53404b15b9506ba0b7208937e6d24c5fbd3d22150963fe6e94fd7a4ad93"
+      sha256: "6c32c5d59626b63a80d461afdc5f4ba36a0eaba490c3d772632e7aaf8462ddc7"
       url: "https://pub.dev"
     source: hosted
-    version: "3.4.0"
+    version: "3.5.3"
   xdg_directories:
     dependency: transitive
     description:
@@ -1371,5 +1371,5 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.3.0 <4.0.0"
+  dart: ">=3.3.2 <4.0.0"
   flutter: ">=3.19.0"

@@ -1,5 +1,4 @@
 import '/app/providers/app_provider.dart';
-import '/app/providers/auth_provider.dart';
 import '/app/providers/event_provider.dart';
 import '/app/providers/firebase_provider.dart';
 import '/app/providers/route_provider.dart';
@@ -19,6 +18,5 @@ final Map<Type, NyProvider> providers = {
   AppProvider: AppProvider(),
   RouteProvider: RouteProvider(),
   EventProvider: EventProvider(),
-  AuthProvider: AuthProvider(),
   FirebaseProvider: FirebaseProvider(),
 };

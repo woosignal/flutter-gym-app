@@ -1,3 +1,8 @@
+## [1.6.0] - 2024-03-28
+
+* Refactor project
+* Pubspec dependency updates
+
 ## [1.5.5] - 2024-03-12
 
 * Pubspec dependency updates

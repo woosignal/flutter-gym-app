@@ -56,14 +56,20 @@ class _AdminDashboardPageState extends NyState<AdminDashboardPage> {
   List<Product> _getEventsForDay(DateTime day) {
     String dateCalendar = DateFormat('EEEE').format(day);
     listEvents[dateCalendar] = allClasses.where((classEvent) {
+      DateTime? classTime = getClassTimeFromProduct(classEvent);
+
+      if (classTime == null) {
+        return false;
+      }
+
       if (isRecurringFromProduct(classEvent) &&
-          DateFormat('EEEE').format(day) ==
-              formatToDay(getClassTimeFromProduct(classEvent))) {
+          dateCalendar ==
+              formatToDay(classTime)) {
         return true;
       }
 
       if (DateFormat('EEEE').format(day) !=
-          formatToDay(getClassTimeFromProduct(classEvent))) {
+          formatToDay(classTime)) {
         return false;
       }
 

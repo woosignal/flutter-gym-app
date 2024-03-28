@@ -25,15 +25,6 @@ class LoginPage extends NyStatefulWidget<LoginController> {
 
 class _LoginPageState extends NyState<LoginPage> {
 
-  String firstName = "";
-
-  // init() async {
-  //
-  //   whenEnv('production', perform: () {
-  //     firstName = "Anthony";
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     ColorStyles color = ThemeColor.get(context);
@@ -49,7 +40,7 @@ class _LoginPageState extends NyState<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Welcome back, $firstName!"),
+              Text("Welcome back".tr()),
               StoreLogo(),
               Column(
                 mainAxisSize: MainAxisSize.max,
@@ -71,7 +62,6 @@ class _LoginPageState extends NyState<LoginPage> {
                       ),
                     ),
                     validationRules: "email",
-                    dummyData: "test@aol.com",
                   ),
                   const SizedBox(
                     height: 16,
@@ -94,7 +84,6 @@ class _LoginPageState extends NyState<LoginPage> {
                       ),
                     ),
                     obscureText: true,
-                    dummyData: "password1",
                     // canSeePassword: true
                   ),
                   const SizedBox(

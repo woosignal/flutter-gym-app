@@ -23,7 +23,10 @@ class DefaultListener extends NyListener {
     CartLineItem cartLineItem =
         CartLineItem.fromProduct(quantityAmount: 1, product: gymClass);
 
-    DateTime dateTime = getClassTimeFromProduct(gymClass);
+    DateTime? dateTime = getClassTimeFromProduct(gymClass);
+    if (dateTime == null) {
+      return;
+    }
     String dateTimeStr = "${formatToDateTime(day)} ${formatToTime(dateTime)}";
 
     cartLineItem.appMetaData = [

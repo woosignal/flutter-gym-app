@@ -15,12 +15,16 @@ class DefaultListener extends NyListener {
   handle(dynamic event) async {
     Order order = event['order'] as Order;
 
+    if (order.classTime == null) {
+      return;
+    }
+
     final Event eventCalendar = Event(
       title: "${order.lineItems?.first.name} with ${order.instructor}",
       description: 'Gym class at ${order.gym}',
       location: '${order.gym}',
-      startDate: order.classTime,
-      endDate: order.classTime.add(Duration(hours: 1)),
+      startDate: order.classTime!,
+      endDate: order.classTime!.add(Duration(hours: 1)),
       iosParams: IOSParams(
         reminder: Duration(hours: 1),
       ),

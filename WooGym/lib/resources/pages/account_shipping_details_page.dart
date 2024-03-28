@@ -14,7 +14,6 @@ import '/app/models/customer_address.dart';
 import '/app/models/customer_country.dart';
 import '/app/models/default_shipping.dart';
 import '/bootstrap/helpers.dart';
-import '/bootstrap/shared_pref/sp_auth.dart';
 import '/resources/widgets/app_loader_widget.dart';
 import '/resources/widgets/buttons.dart';
 import '/resources/widgets/customer_address_input.dart';
@@ -272,12 +271,10 @@ class _AccountShippingDetailsPageState
             customerCountry: _shippingCountry,
           );
 
-      String? userToken = await readAuthToken();
-
       WPUserInfoUpdatedResponse? wpUserInfoUpdatedResponse;
       try {
         wpUserInfoUpdatedResponse = await WPJsonAPI.instance.api(
-          (request) => request.wpUpdateUserInfo(userToken, metaData: [
+          (request) => request.wpUpdateUserInfo(metaData: [
             ...userBillingAddress.toUserMetaDataItem('billing'),
             ...userShippingAddress.toUserMetaDataItem('shipping'),
           ]),
@@ -343,12 +340,10 @@ class _AccountShippingDetailsPageState
   }
 
   _fetchUserDetails() async {
-    String? userToken = await readAuthToken();
-
     WPUserInfoResponse? wpUserInfoResponse;
     try {
       wpUserInfoResponse = await WPJsonAPI.instance
-          .api((request) => request.wpGetUserInfo(userToken!));
+          .api((request) => request.wpGetUserInfo());
     } on Exception catch (e) {
       print(e.toString());
       showToastNotification(

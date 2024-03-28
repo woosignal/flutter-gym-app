@@ -10,18 +10,17 @@
 
 import 'dart:convert';
 import 'package:collection/collection.dart' show IterableExtension;
+import 'package:wp_json_api/models/wp_user.dart';
 import '/app/models/billing_details.dart';
 import '/app/models/cart.dart';
 import '/app/models/cart_line_item.dart';
 import '/app/models/checkout_session.dart';
 import '/app/models/default_shipping.dart';
 import '/app/models/payment_type.dart';
-import '/app/models/user.dart';
 import '/bootstrap/app_helper.dart';
 import '/bootstrap/enums/symbol_position_enums.dart';
 import '/bootstrap/extensions.dart';
 import '/bootstrap/shared_pref/shared_key.dart';
-import '/bootstrap/shared_pref/sp_auth.dart';
 import '/config/currency.dart';
 import '/config/payment_gateways.dart';
 import 'package:intl/intl.dart';
@@ -42,8 +41,8 @@ import 'package:wp_json_api/wp_json_api.dart' as wp;
 import '../resources/themes/styles/color_styles.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
-Future<User?> getUser() async =>
-    (await (NyStorage.read<User>(SharedKey.authUser)));
+Future<WpUser?> getUser() async =>
+    (await wp.WPJsonAPI.wpUser());
 
 Future appWooSignal(Function(ws.WooSignal api) api) async {
   return await api(ws.WooSignal.instance);
@@ -99,9 +98,6 @@ Future<List<PaymentType?>> getPaymentTypes() async {
 
   return paymentTypes.where((v) => v != null).toList();
 }
-
-dynamic envVal(String envVal, {dynamic defaultValue}) =>
-    (getEnv(envVal) ?? defaultValue);
 
 PaymentType addPayment(
         {required int id,
@@ -513,9 +509,7 @@ bool isProductNew(Product? product) {
 }
 
 Future<WPUserInfoResponse> wpFetchUserDetails() async {
-  return await wp.WPJsonAPI.instance.api((request) async {
-    return request.wpGetUserInfo((await readAuthToken()) ?? "0");
-  });
+  return await wp.WPJsonAPI.instance.api((request) async => await request.wpGetUserInfo());
 }
 
 String? getInstructorFromProduct(Product product) {
@@ -559,16 +553,24 @@ bool isRecurringFromProduct(Product product) {
   return metaData.value == "1";
 }
 
-DateTime getClassTimeFromProduct(Product product) {
+DateTime? getClassTimeFromProduct(Product product) {
   ws_meta.MetaData? metaData = product.metaData
       .firstWhereOrNull((element) => element.key == 'class_time');
   if (metaData == null) return DateTime.now();
-  return DateTime.parse(metaData.value ?? "");
+  try {
+    if (metaData.value == null) {
+       return null;
+    }
+    return DateTime.parse(metaData.value!);
+  } on Exception catch (e) {
+    NyLogger.debug(e.toString());
+    return null;
+  }
 }
 
 extension AppProduct on Product {
   bool get isRecurring => isRecurringFromProduct(this);
-  DateTime get classTime => getClassTimeFromProduct(this);
+  DateTime? get classTime => getClassTimeFromProduct(this);
   String? get instructor => getInstructorFromProduct(this);
   String? get participants => getParticipantsFromProduct(this);
   String? get gym => getGymFromOrder(this);
@@ -595,7 +597,11 @@ String formatToDateTime(DateTime dateTime) =>
     DateFormat('yyyy-MM-dd').format(dateTime);
 
 String formatToTimeFromProduct(Product product) {
-  return formatToTime(getClassTimeFromProduct(product));
+  DateTime? dateTime = getClassTimeFromProduct(product);
+  if (dateTime == null) {
+    return "";
+  }
+  return formatToTime(dateTime);
 }
 
 Future<bool> isClassBookable(
@@ -634,7 +640,7 @@ extension DateOnlyCompare on DateTime {
 }
 
 extension AppOrder on Order {
-  DateTime get classTime => OrderHelper.getClassTimeFromOrder(this);
+  DateTime? get classTime => OrderHelper.getClassTimeFromOrder(this);
   String? get instructor => OrderHelper.getInstructorFromOrder(this);
   String? get gym => OrderHelper.getGymFromOrder(this);
   String get formattedDate => OrderHelper.formatToNiceDate(this);
@@ -642,11 +648,16 @@ extension AppOrder on Order {
 }
 
 class OrderHelper {
-  static DateTime getClassTimeFromOrder(Order order) {
+  static DateTime? getClassTimeFromOrder(Order order) {
     ws_meta.MetaData? metaData = order.metaData
         ?.firstWhereOrNull((element) => element.key == 'class_time');
     if (metaData == null) return DateTime.now();
-    return DateTime.parse(metaData.value ?? "");
+    try {
+      return DateTime.parse(metaData.value ?? "");
+    } on Exception catch (e) {
+      NyLogger.debug('Error ${metaData.value} | ${e.toString()}');
+      return null;
+    }
   }
 
   static String? getInstructorFromOrder(Order order) {
@@ -680,11 +691,18 @@ class OrderHelper {
   }
 
   static String formatToNiceDate(Order order) {
-    DateTime dateTime = getClassTimeFromOrder(order);
-    return '${DateFormat('E').format(dateTime)} ${addOrdinal(dateTime.day)} ${DateFormat('MMM').format(dateTime)}';
+    DateTime? dateTime = getClassTimeFromOrder(order);
+    if (dateTime == null) {
+      return "";
+    }
+    return dateTime.toShortDate();
   }
 
   static String formatToTimeFromOrder(Order order) {
-    return formatToTime(getClassTimeFromOrder(order));
+    DateTime? dateTime = getClassTimeFromOrder(order);
+    if (dateTime == null) {
+      return "";
+    }
+    return formatToTime(dateTime);
   }
 }

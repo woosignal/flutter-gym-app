@@ -1,11 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import '/bootstrap/app_helper.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/woosignal_app.dart';
-import '/app/models/user.dart';
-import '/bootstrap/shared_pref/shared_key.dart';
 import '/config/storage_keys.dart';
 import '/resources/pages/dashboard_page.dart';
 import 'package:wp_json_api/exceptions/empty_username_exception.dart';
@@ -62,29 +58,19 @@ class RegisterController extends Controller {
           "password": [password, "min:6"],
         },
         onSuccess: () async {
-          String username =
-              (email.replaceAll(RegExp(r'([@.])'), "")) + _randomStr(4);
-
           WPUserRegisterResponse? wpUserRegisterResponse;
           try {
             wpUserRegisterResponse = await WPJsonAPI.instance.api(
-              (request) => request.wpRegister(
+              (request) => request.wcRegister(
                 email: email.toLowerCase(),
                 password: password,
-                username: username,
+                args: {
+                  "first_name": firstName,
+                  "last_name": lastName,
+                }
               ),
             );
 
-            if (wpUserRegisterResponse?.data?.userToken != null) {
-              String token = wpUserRegisterResponse!.data!.userToken!;
-              await WPJsonAPI.instance.api(
-                  (request) => request.wpUserAddRole(token, role: "customer"));
-              await WPJsonAPI.instance.api((request) =>
-                  request.wpUserRemoveRole(token, role: "subscriber"));
-              await WPJsonAPI.instance.api((request) =>
-                  request.wpUpdateUserInfo(token,
-                      firstName: firstName, lastName: lastName));
-            }
           } on UsernameTakenException catch (e) {
             showToastNotification(context!,
                 title: trans("Oops!"),
@@ -131,12 +117,6 @@ class RegisterController extends Controller {
             return;
           }
 
-          // Save user to shared preferences
-          String? token = wpUserRegisterResponse.data!.userToken;
-          String userId = wpUserRegisterResponse.data!.userId.toString();
-          User user = User.fromUserAuthResponse(token: token, userId: userId);
-          await Auth.set(user, key: SharedKey.authUser);
-
           String redirectPath = DashboardPage.path;
           await NyStorage.store(StorageKey.redirectPathAfterAuth, redirectPath);
 
@@ -181,16 +161,6 @@ class RegisterController extends Controller {
         ],
       ),
     );
-  }
-
-  String _randomStr(int strLen) {
-    const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-    Random rnd = Random(DateTime.now().millisecondsSinceEpoch);
-    String result = "";
-    for (var i = 0; i < strLen; i++) {
-      result += chars[rnd.nextInt(chars.length)];
-    }
-    return result;
   }
 
   void showTermsAndConditions() {

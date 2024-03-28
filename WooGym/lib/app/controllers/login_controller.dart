@@ -4,11 +4,9 @@ import 'package:wp_json_api/models/responses/wp_user_info_response.dart';
 import 'package:wp_json_api/models/responses/wp_user_login_response.dart';
 import 'package:wp_json_api/wp_json_api.dart' as wp;
 import 'package:wp_json_api/models/responses/wp_user_info_response.dart' as wp;
-import '/bootstrap/shared_pref/shared_key.dart';
 import '/config/storage_keys.dart';
 import '/resources/pages/admin_dashboard_page.dart';
 import '/resources/pages/dashboard_page.dart';
-import '/app/models/user.dart';
 import 'controller.dart';
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:wp_json_api/exceptions/incorrect_password_exception.dart';
@@ -70,17 +68,10 @@ class LoginController extends Controller {
             return;
           }
 
-          String? token = wpUserLoginResponse.data!.userToken;
-          String userId = wpUserLoginResponse.data!.userId.toString();
-          User user = User.fromUserAuthResponse(token: token, userId: userId);
-
           WPUserInfoResponse wpUserInfoResponse = await wp.WPJsonAPI.instance
-              .api((request) => request.wpGetUserInfo(token!));
+              .api((request) => request.wpGetUserInfo());
           wp.MetaData? meta = (wpUserInfoResponse.data?.metaData ?? [])
               .firstWhereOrNull((element) => element.key == 'app_admin');
-
-          await Auth.set(user);
-          await user.save(SharedKey.authUser);
 
           if (meta == null) {
             await NyStorage.store(

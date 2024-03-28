@@ -15,7 +15,6 @@ import '/app/models/customer_address.dart';
 import '/app/models/customer_country.dart';
 import '/bootstrap/app_helper.dart';
 import '/bootstrap/helpers.dart';
-import '/bootstrap/shared_pref/sp_auth.dart';
 import '/resources/widgets/app_loader_widget.dart';
 import '/resources/widgets/buttons.dart';
 import '/resources/widgets/customer_address_input.dart';
@@ -398,11 +397,9 @@ class _CheckoutDetailsPageState extends NyState<CheckoutDetailsPage> {
 
       // Update WP shipping info for user
       if (_wpLoginEnabled == true) {
-        String? userToken = await readAuthToken();
-
         try {
           await WPJsonAPI.instance.api(
-            (request) => request.wpUpdateUserInfo(userToken, metaData: [
+            (request) => request.wpUpdateUserInfo(metaData: [
               ...?billingDetails.billingAddress?.toUserMetaDataItem('billing'),
               ...?billingDetails.shippingAddress
                   ?.toUserMetaDataItem('shipping'),
@@ -435,27 +432,6 @@ class _CheckoutDetailsPageState extends NyState<CheckoutDetailsPage> {
       CheckoutSession.getInstance.shippingType = null;
       Navigator.pop(context);
     });
-  }
-
-  _onChangeShipping(bool? value) async {
-    _hasDifferentShippingAddress = value;
-    activeTabIndex = 1;
-    activeTab = value == true ? tabShippingDetails() : tabBillingDetails();
-
-    CustomerAddress? sfCustomerShippingAddress =
-        await CheckoutSession.getInstance.getShippingAddress();
-    if (sfCustomerShippingAddress == null) {
-      _setFields(
-          firstName: "",
-          lastName: "",
-          addressLine: "",
-          city: "",
-          postalCode: "",
-          phoneNumber: "",
-          emailAddress: "",
-          customerCountry: CustomerCountry());
-    }
-    setState(() {});
   }
 
   CustomerAddress _setCustomerAddress(
@@ -501,12 +477,10 @@ class _CheckoutDetailsPageState extends NyState<CheckoutDetailsPage> {
 
   _fetchUserDetails() async {
     await lockRelease('load_shipping_info', perform: () async {
-      String? userToken = await readAuthToken();
-
       WPUserInfoResponse? wpUserInfoResponse;
       try {
         wpUserInfoResponse = await WPJsonAPI.instance
-            .api((request) => request.wpGetUserInfo(userToken!));
+            .api((request) => request.wpGetUserInfo());
       } on Exception catch (e) {
         print(e.toString());
         showToastNotification(

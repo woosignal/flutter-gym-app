@@ -6,7 +6,6 @@ import 'package:wp_json_api/wp_json_api.dart';
 
 import '/bootstrap/app_helper.dart';
 import '/bootstrap/helpers.dart';
-import '/bootstrap/shared_pref/sp_auth.dart';
 import 'controller.dart';
 
 class ProfileController extends Controller {
@@ -14,12 +13,10 @@ class ProfileController extends Controller {
 
   _wpDeleteAccount() async {
     lockRelease('delete_account', perform: () async {
-      String? userToken = await readAuthToken();
-
       WPUserDeleteResponse? wpUserDeleteResponse;
       try {
         wpUserDeleteResponse = await WPJsonAPI.instance
-            .api((request) => request.wpUserDelete(userToken));
+            .api((request) => request.wpUserDelete());
       } on Exception catch (e) {
         NyLogger.error(e.toString());
         showToastNotification(
@@ -48,10 +45,18 @@ class ProfileController extends Controller {
   }
 
   void showTermsAndConditions() {
+    if (wooSignalApp?.appTermsLink == null) {
+      NyLogger.debug('Terms and Conditions link not set');
+      return;
+    }
     openBrowserTab(url: wooSignalApp!.appTermsLink!);
   }
 
   void showPrivacyPolicy() {
+    if (wooSignalApp?.appPrivacyLink == null) {
+      NyLogger.debug('Privacy Policy link not set');
+      return;
+    }
     openBrowserTab(url: wooSignalApp!.appPrivacyLink!);
   }
 }

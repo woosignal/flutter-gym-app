@@ -43,15 +43,21 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
 
   List<Product> _getEventsForDay(DateTime day) {
     String dateCalendar = DateFormat('EEEE').format(day);
+
     listEvents[dateCalendar] = allClasses.where((classEvent) {
+      DateTime? classTime = getClassTimeFromProduct(classEvent);
+      if (classTime == null) {
+        return false;
+      }
+
       if (isRecurringFromProduct(classEvent) &&
-          DateFormat('EEEE').format(day) ==
-              formatToDay(getClassTimeFromProduct(classEvent))) {
+          dateCalendar ==
+              formatToDay(classTime)) {
         return true;
       }
 
       if (DateFormat('EEEE').format(day) !=
-          formatToDay(getClassTimeFromProduct(classEvent))) {
+          formatToDay(classTime)) {
         return false;
       }
 
@@ -69,18 +75,18 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
         _rangeSelectionMode = RangeSelectionMode.toggledOff;
       });
     }
-    updateState("NyPullToRefreshBookAClass");
+    StateAction.refreshPage("NyPullToRefreshBookAClass");
   }
 
-  void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
-    setState(() {
-      _selectedDay = DateTime.now();
-      _focusedDay = focusedDay;
-      _rangeStart = start;
-      _rangeEnd = end;
-      _rangeSelectionMode = RangeSelectionMode.toggledOn;
-    });
-  }
+  // void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
+  //   setState(() {
+  //     _selectedDay = DateTime.now();
+  //     _focusedDay = focusedDay;
+  //     _rangeStart = start;
+  //     _rangeEnd = end;
+  //     _rangeSelectionMode = RangeSelectionMode.toggledOn;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +148,7 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
                 ),
               ),
               onDaySelected: _onDaySelected,
-              onRangeSelected: _onRangeSelected,
+              // onRangeSelected: _onRangeSelected,
               onPageChanged: (focusedDay) {
                 _focusedDay = focusedDay;
               },
@@ -152,7 +158,7 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
                 padding: EdgeInsets.only(top: 8),
                 onRefresh: () async {
                   allClasses = await widget.controller.fetchGymClasses();
-                  updateState("NyPullToRefreshBookAClass");
+                  StateAction.refreshPage("NyPullToRefreshBookAClass");
                 },
                 child: (context, data) {
                   return UserClassList(
@@ -196,7 +202,7 @@ class _BookAClassPageState extends NyState<BookAClassPage> {
                           await lockRelease('refreshing_data',
                               perform: () async {
                             await reboot();
-                            updateState("NyPullToRefreshBookAClass");
+                            StateAction.refreshPage("NyPullToRefreshBookAClass");
                           });
                         },
                       ),

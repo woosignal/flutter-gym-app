@@ -9,9 +9,9 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
+import 'package:wp_json_api/wp_json_api.dart';
 import '/app/controllers/dashboard_controller.dart';
 import '/bootstrap/helpers.dart';
-import '/bootstrap/shared_pref/sp_auth.dart';
 import '/resources/pages/profile_page.dart';
 import '/resources/widgets/about_tab_widget.dart';
 import '/resources/widgets/book_a_class_widget.dart';
@@ -36,21 +36,32 @@ class _DashboardPageState extends NyState<DashboardPage> {
   @override
   boot() async {
     _wpUserInfoResponse = await wpFetchUserDetails();
-    String? userId = await readUserId();
+    String? userId = await WPJsonAPI.wpUserId();
     if (userId != null) {
       _allOrders = await appWooSignal(
           (api) => api.getOrders(customer: int.parse(userId)));
     }
     // order by class time
-    for (var order in _allOrders) {
-      if (order.classTime.isAfter(DateTime.now())) {
+    for (Order order in _allOrders) {
+      if (order.classTime == null) {
+        continue;
+      }
+      if (order.classTime!.isAfter(DateTime.now())) {
         _ordersUpcoming.add(order);
       } else {
         _ordersPast.add(order);
       }
     }
 
-    _ordersUpcoming.sort((a, b) => a.classTime.compareTo(b.classTime));
+    _ordersUpcoming.sort((a, b) {
+      if (a.classTime == null) {
+        return 0;
+      }
+      if (b.classTime == null) {
+        return 0;
+      }
+      return a.classTime!.compareTo(b.classTime!);
+    });
     _allOrders = [
       ..._ordersUpcoming,
       ..._ordersPast,

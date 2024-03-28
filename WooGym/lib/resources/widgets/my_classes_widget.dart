@@ -9,12 +9,12 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/material.dart';
+import 'package:wp_json_api/wp_json_api.dart';
 import '/app/events/add_to_calendar_event.dart';
 import '/bootstrap/extensions.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:woosignal/models/response/order.dart';
 import '/bootstrap/helpers.dart';
-import '/bootstrap/shared_pref/sp_auth.dart';
 
 class MyClasses extends StatefulWidget {
   MyClasses({super.key, required this.orders});
@@ -43,6 +43,11 @@ class _MyClassesState extends NyState<MyClasses> {
         child: (context, order) {
           order as Order;
 
+          DateTime? classTimeFromOrder = OrderHelper.getClassTimeFromOrder(order);
+          if (classTimeFromOrder == null) {
+            return SizedBox.shrink();
+          }
+
           return Container(
             width: double.infinity,
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
@@ -63,11 +68,11 @@ class _MyClassesState extends NyState<MyClasses> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            color: (OrderHelper.getClassTimeFromOrder(order)
+                            color: (classTimeFromOrder
                                     .isAfter(DateTime.now()))
                                 ? Colors.teal.shade500
                                 : Colors.grey,
-                            gradient: (OrderHelper.getClassTimeFromOrder(order)
+                            gradient: (classTimeFromOrder
                                     .isAfter(DateTime.now()))
                                 ? LinearGradient(
                                     colors: [
@@ -144,7 +149,7 @@ class _MyClassesState extends NyState<MyClasses> {
           );
         },
         data: () async {
-          String? userId = await readUserId();
+          String? userId = await WPJsonAPI.wpUserId();
           if (userId != null) {
             return widget.orders;
           }
