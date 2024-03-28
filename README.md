@@ -20,7 +20,7 @@ WooGym is an App Template for Gym classes, customers will be able to book and ma
 
 This app template supports WordPress sites using WooCommerce.
 
-You can also upload the app to the IOS app store and Google play store using Flutter.
+You can also upload the app to the IOS app store and Google Play store using Flutter.
 
 ### Requirements
 
@@ -36,7 +36,7 @@ You can also upload the app to the IOS app store and Google play store using Flu
 2. Sign up for free on [WooSignal](https://woosignal.com) and link your WooCommerce store
 3. Add your app key into the **.env** file and hit play (with Android Studio) to build the app 🥳
 
-Full documentation this available [here](https://woosignal.com/docs/app/woogym)
+Full documentation is available [here](https://woosignal.com/docs/app/woogym)
 
 ### Creating classes
 
